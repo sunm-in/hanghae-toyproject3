@@ -10,7 +10,7 @@ db = client.dbhanghae3
 # 메인
 @app.route('/')
 def home():
-   return render_template('home.html')
+   return render_template('index.html')
 
 
 # 로그인
@@ -23,6 +23,18 @@ def login():
 @app.route('/register')
 def register():
     return render_template('register.html')
+
+
+# 위시리스트
+@app.route('/favorite')
+def favorite():
+    return render_template('wishlist.html')
+
+
+# 장바구니
+@app.route('/cart')
+def cart():
+    return render_template('cart.html')
 
 
 if __name__ == '__main__':
