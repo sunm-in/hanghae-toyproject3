@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 38px;
+}
+
+.status-bar__element {
+    display: flex;
+    justify-content: center;
+    width: 25vh;
+    line-height: 38px;
+}
+
+.status-bar__element a {
+    color: white;
+    font-size: 12px;
+}
+
+.status-bar__icon {
+    color: white;
+    width: 17px;
+    height: 17px;
+    margin: auto 1vh;
+}
+/* -----    -----   -----   ----- */
+.top-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu__element {
+    display: flex;
+    justify-content: center;
+    width: 33%;
+    margin-top: 4vh;
+}
+
+.top-menu__element a {
+    color: black;
+    font-weight: bold;
+    line-height: 5vh;
+    font-size: 15px;
+}
+
+.top-start {
+    justify-content: space-around;
+    padding-right: 2vh;
+}
+
+.top-middle input {
+    width: 100vh;
+    margin-top: -1vh;
+    margin-right: -25vh;
+    margin-left: 1vh;
+    padding: 15px;
+
+    border-radius: 28px;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+.top-end {
+    justify-content: flex-end;
+    padding-right: 2vh;
+}
+
+.top-menu__icon {
+    margin: 1vh 2vh;
+    width: 23px;
+    height: 23px;
+}
