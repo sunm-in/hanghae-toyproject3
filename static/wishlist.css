@@ -129,3 +129,104 @@ body {
     height: 22px;
     margin: 5px 0 0 1px;
 }
+/*----- -----   -----   -----   -----*/
+.list-wrap {
+    display: grid;
+    /*background-color: whitesmoke;*/
+
+    margin-left: 15vh;
+    margin-top: 6vh;
+    margin-right: 4vh;
+}
+
+.list-header {
+    /*background-color: lightyellow;*/
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+.list-first {
+    display: flex;
+}
+
+.list-header__title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #353b48;
+    margin-right: 7px;
+}
+
+.selected-list {
+    background-color: #dff9fb;
+    color: #1e3799;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: -6px;
+}
+
+a:hover {
+    color: black;
+}
+
+.count-list {
+    font-size: 12px;
+}
+
+.list-icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+}
+
+.list-btn {
+    position: relative;
+    float: right;
+    margin-top: -5vh;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.list-btn:hover {
+    background-color: whitesmoke;
+}
+
+.list-btn:focus {
+    background-color: lightgrey;
+}
+
+.item-content {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 32vh;
+    margin-top: 2vh;
+}
+
+#creat-list {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+
+    width: 200px;
+    height: 55px;
+    margin-top: 5vh;
+    line-height: 55px;
+}
+
+.creat-btn_icon {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    top: 7px;
+    right: 5px;
+}
+
+
