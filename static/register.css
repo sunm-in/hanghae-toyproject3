@@ -81,7 +81,7 @@ svg {
 
 .searchbar {
     width: 720px;
-    display:grid;
+    display: grid;
     grid-template-columns: 15px 630px 15px;
     line-height: 50px;
 }
@@ -101,3 +101,226 @@ svg {
 .minimenu {
     display: none;
 }
+
+/* -----    ----- 끝 -----   ----- */
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+/*회원가입*/
+#letin {
+    padding: 130px 48px;
+    display: grid;
+    grid-template-columns: 3fr 2.5fr 6.5fr;
+}
+
+/*회원가입 - left*/
+.left {
+    width: 415px;
+    padding: 0px 16px;
+}
+
+.img {
+    margin-top: 48px;
+}
+
+/*회원가입 - right*/
+
+/*회원가입 - radio*/
+.right {
+    padding: 20px 16px;
+    width: 640px;
+}
+
+.checks {
+    margin: 30px 0px 60px 0px;
+}
+
+.checks input[type="radio"] {
+    -webkit-appearance: none;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 15px;
+}
+
+.checks input[type="radio"]:checked:after {
+    background: #111;
+    content: "";
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    margin: 1px;
+    display: block;
+}
+
+.checks label {
+    font-size: 15px;
+}
+
+.chk {
+    margin-top: 13px;
+}
+
+.checks label span {
+    text-decoration: underline;
+}
+
+/* -----    -----   -----   ----- */
+.wide {
+    width: 650px;
+}
+
+.short {
+    width: 416px;
+}
+
+input {
+    border: none;
+    border-bottom: #929292 1px solid;
+    width: 448px;
+}
+
+input:focus {
+    outline: none;
+    color: #1e3799;
+}
+
+label {
+    position: absolute;
+}
+
+/*회원가입 - 정보입력*/
+.info div {
+    padding: 24px 32px 1px 0px;
+    margin-bottom: 40px;
+}
+
+#birth {
+    display: flex;
+    flex-direction: row;
+}
+
+.birth {
+    position: relative;
+    float: right;
+}
+
+.phone p {
+    position: absolute;
+}
+
+.phone input {
+    padding-left: 65px;
+}
+
+.sex {
+    padding-right: 0px;
+}
+
+.sex select {
+    border: none;
+    border-bottom: 2px #1e3799 solid;
+}
+
+.sex select:focus {
+    outline: none;
+}
+
+.sex small {
+    width: 416px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* -----    -----   -----   ----- */
+/*회원가입 - 우편번호*/
+#btn_postal {
+    display: block;
+    height: 3.5rem;
+    width: 280px;
+    background-color: #0058a3;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 40px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#postal_code div {
+    padding: 24px 32px 1px 0px;
+    margin-bottom: 40px;
+}
+
+/*회원가입 - 선호하는 매장*/
+#shop {
+    padding: 24px 32px 1px 0px;
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+#shop:focus {
+    outline: none;
+}
+
+/*회원가입 - 이메일*/
+.email {
+    padding: 24px 32px 1px 0px;
+    margin-bottom: 40px;
+}
+
+/*회원가입 - 비밀번호*/
+.pw {
+    padding: 24px 32px 1px 0px;
+    margin-bottom: 40px;
+}
+
+.dontshowpw {
+    display: none;
+}
+
+/* -----    -----   -----   ----- */
+/*회원가입 - chkbox*/
+#chkbox {
+    font-size: 14.5px;
+    margin-bottom: 40px;
+}
+
+#chkbox input {
+    width: 22px;
+    height: 22px;
+    margin-right: 20px;
+}
+
+#chkbox span {
+    text-decoration: underline;
+}
+
+.ad {
+    margin: 15px 0px 0px 40px;
+}
+
+.ad div {
+    margin-bottom: 15px;
+}
+/* -----    -----   -----   ----- */
+
+#btn_letin {
+    width: 530px;
+    height: 3.5rem;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 40px;
+}
+
