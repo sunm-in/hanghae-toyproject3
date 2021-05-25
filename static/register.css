@@ -12,6 +12,7 @@ svg {
     display: flex;
     justify-content: center;
     background-color: black;
+    width: 100vw;
     height: 38px;
 }
 
@@ -90,7 +91,6 @@ svg {
     margin-left: 45px;
 }
 
-
 .top-end {
     padding-top: 5px;
     display: flex;
@@ -98,3 +98,6 @@ svg {
     width: 192px;
 }
 
+.minimenu {
+    display: none;
+}

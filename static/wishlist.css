@@ -30,8 +30,10 @@ body {
 }
 /* -----    -----   -----   -----   -----*/
 .top-menu {
+    /*background-color: #0058a3;*/
     display: flex;
     justify-content: center;
+    /*align-items: center;*/
 }
 
 .top-menu__element {
@@ -236,5 +238,30 @@ a:hover {
     margin-top: 15vh;
 }
 
+@media screen and (max-width: 1200px) {
+    body {
+        width: 100vw;
+    }
 
+    .top-menu {
+        display: flex;
+
+    }
+
+    #menu-btn {
+        margin-left: -6vh;
+    }
+
+    .top-middle {
+        margin-left: -3vh;
+    }
+
+    .search {
+        margin-left: 2vh;
+    }
+
+    .camera {
+        margin-left: -3vh;
+    }
+}
 
