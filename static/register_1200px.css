@@ -29,30 +29,28 @@ body {
 }
 
 /*---------------------------------*/
-.none{
-    display: none;
-}
 #letin {
     padding: 130px auto;
     width: 1200px;
-    display: flex;
-    flex-direction: row;
+    margin: auto;
 }
 .right {
-    width: 400px;
     margin-left: 60px;
+}
+
+#phone {
+    width: 500px;
+}
+
+.phone small {
+    display: none;
 }
 
 .wide {
     width: 500px;
 }
 
-footer {
-    width: 1200px;
-}
-
 #footer {
     width: 1200px;
-    display: flex;
-    flex-direction: row;
+    margin: auto;
 }

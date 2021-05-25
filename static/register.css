@@ -118,6 +118,8 @@ a:hover {
     padding: 130px 48px;
     display: grid;
     grid-template-columns: 3fr 2.5fr 6.5fr;
+    width: 1440px;
+    margin: auto;
 }
 
 /*회원가입 - left*/
