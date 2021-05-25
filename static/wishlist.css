@@ -51,7 +51,7 @@ body {
 .top-start {
 
     justify-content: space-between;
-    /*padding-right: 2vh;*/
+    padding-right: 2vh;
     padding-left: 4vh;
     width: 600px;
 }

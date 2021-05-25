@@ -163,12 +163,13 @@ input[id="menuicon"]:checked + label + div {
     padding-right: 2vh;
 }
 
-.top-middle input {
-    width: 100vh;
+.top-middle {
+    width: 670px;
+    height: 55px;
     margin-top: -1vh;
     margin-right: -25vh;
     margin-left: 5vh;
-    padding: 15px;
+    padding: 15px 15px 15px 60px;
 
     border-radius: 28px;
     border: none;
@@ -183,7 +184,28 @@ input[id="menuicon"]:checked + label + div {
 
 .top-menu__icon {
     margin: 1vh 2vh;
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
+}
+
+.searchbar {
+    width: 720px;
+    display:grid;
+    grid-template-columns: 15px 630px 15px;
+    line-height: 50px;
+}
+
+.search {
+    position: relative;
+    margin-left: 75px;
+    width: 24px;
+    height: 24px;
+}
+
+.camera {
+    width: 24px;
+    height: 24px;
+    margin-left: 5vh;
+    margin-top: 5px;
 }
 /*상단 메뉴 끝*/
