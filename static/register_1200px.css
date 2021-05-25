@@ -1,0 +1,29 @@
+body {
+    width: 100vw;
+}
+
+#allproducts {
+    display: none;
+}
+
+#showroom {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.top-start {
+    width: 50px;
+    padding-right: 2vh;
+}
+
+.delivery {
+    display: none;
+}
+
+.minimenu {
+    display: block;
+    margin-top: 0px;
+}
