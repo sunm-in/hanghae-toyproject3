@@ -5,6 +5,7 @@
     background-color: black;
     height: 38px;
 }
+
 .status-bar__element {
     display: flex;
     justify-content: center;
@@ -190,7 +191,7 @@ input[id="menuicon"]:checked + label + div {
 
 .searchbar {
     width: 720px;
-    display:grid;
+    display: grid;
     grid-template-columns: 15px 630px 15px;
     line-height: 50px;
 }
@@ -208,4 +209,53 @@ input[id="menuicon"]:checked + label + div {
     margin-left: 5vh;
     margin-top: 5px;
 }
+
 /*상단 메뉴 끝*/
+.noproducts {
+    height: 20vh;
+    margin-left: 12vh;
+    margin-top: 6vh;
+    margin-right: 4vh;
+    padding-top: 60px;
+}
+
+.cart-message {
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.item-image {
+    width: 250px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.item-desc {
+    margin-bottom: 0vh;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 13px;
+}
+
+
+
+/*.recommendation {*/
+/*    padding: 300px 0 0 0;*/
+/*    width: 320px;*/
+/*    height: 900px;*/
+/*    overflow-y: auto;*/
+/*    overflow-x: hidden;*/
+/*    transform: rotate(-90deg) translateY(-300px);*/
+/*    transform-origin: right top;*/
+/*}*/
+/*.recommendation > div {*/
+/*    width: 300px;*/
+/*    height: 300px;*/
+/*    transform: rotate(90deg);*/
+/*    transform-origin: right top;*/
+/*}*/
