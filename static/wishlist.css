@@ -7,6 +7,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: black;
+    width: 100%;
     height: 38px;
 }
 
@@ -41,6 +42,13 @@ body {
     justify-content: center;
     width: 33%;
     margin-top: 4vh;
+}
+
+.top-menu__start {
+    display: flex;
+    justify-content: space-between;
+    width: 40vh;
+    margin-left: 10vh;
 }
 
 .top-menu__element a {
@@ -106,12 +114,10 @@ body {
 /*----- -----   -----   -----   -----*/
 /* 사이드 메뉴 */
 #menu-btn {
-    position: relative;
+    position: fixed;
     cursor: pointer;
     width: 40px;
     height: 40px;
-    top: 2px;
-    left: 15px;
 
     border: none;
     border-radius: 50%;
@@ -134,15 +140,12 @@ body {
 /*----- -----   -----   -----   -----*/
 .list-wrap {
     display: grid;
-    /*background-color: whitesmoke;*/
-
     margin-left: 15vh;
     margin-top: 6vh;
     margin-right: 4vh;
 }
 
 .list-header {
-    /*background-color: lightyellow;*/
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
@@ -230,38 +233,68 @@ a:hover {
     top: 7px;
     right: 5px;
 }
-/*----- -----   -----   -----   -----*/
-.bottom-menu-wrap {
-    display: grid;
-    background-color: whitesmoke;
 
+#creat-list:hover {
+    background-color: #2d3436;
+}
+/*----- -----   -----   -----   -----*/
+/*footer*/
+footer {
     margin-top: 15vh;
+    height: 754px;
+    background-color: #f5f5f5;
+    padding: 4rem 0 0 0;
+    font-size: 14px;
 }
 
+h3 {
+    font-size: 1.375rem;
+    font-weight: bold;
+}
+
+#footer {
+    width: 1300px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn_family {
+    border-radius: 40px;
+    border: none;
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 45px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#footer span {
+    color: black;
+}
+/*----- -----   -----   -----   -----*/
+
+
+/*----- -----   -----   -----   -----*/
 @media screen and (max-width: 1200px) {
-    body {
-        width: 100vw;
-    }
-
-    .top-menu {
-        display: flex;
-
-    }
-
-    #menu-btn {
-        margin-left: -6vh;
-    }
-
-    .top-middle {
-        margin-left: -3vh;
-    }
-
-    .search {
-        margin-left: 2vh;
-    }
-
-    .camera {
-        margin-left: -3vh;
-    }
+    body {width: 100vw;}
+    .status-bar {width: 100%;}
+    .top-menu {display: flex;}
+    .top-menu__start {margin-left: 10vh;}
+    #menu-btn {margin-left: -2vh;}
+    .top-middle {margin-left: -2vh; width: 85vh}
+    .search {margin-left: 2vh;}
+    .camera {margin-left: -23vh;}
+    #footer {width: 100%;}
+    .top-end {margin-left: -20vh;}
 }
 
