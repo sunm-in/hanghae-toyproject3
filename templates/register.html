@@ -171,8 +171,11 @@
     <div id="letin">
         <div class="left">
             <div>
-                <h1 style="font-weight: bold; margin-bottom: 0px"><span style="color: #0058a3">IKEA Family</span> 회원가입
+                <h1 id="chked_yes" style="font-weight: bold; margin-bottom: 0px"><span style="color: #0058a3">IKEA Family</span>
+                    회원가입
                 </h1>
+                <h1 id="chked_no" style="font-weight: bold; margin-bottom: 0px; display: none; position: relative">
+                    회원가입</h1>
                 <p style="font-size: 15px">이미 가입하셨나요? <a href="/login"><span
                         style="text-decoration: underline">로그인 하기</span></a></p>
             </div>
@@ -183,23 +186,23 @@
             <p style="font-weight: bold">IKEA Family에 가입하시겠어요?</p>
             <div class="checks">
                 <div class="chk">
-                    <input type="radio" id="yes">
+                    <input type="radio" id="yes" name="chk" checked onclick="yes()">
                     <label for="yes">예, IKEA Family의 다양한 혜택 및 할인을 즐기고 싶습니다! <span>IKEA Family 혜택</span></label><br>
                 </div>
                 <div class="chk">
-                    <input type="radio" id="no">
+                    <input type="radio" id="no" name="chk" onclick="no()">
                     <label for="no">아니요, 추가 혜택 없이 온라인 몰만 가입하고 싶습니다. <span>IKEA 온라인몰 혜택</span></label></div>
             </div>
             <div class="info">
                 <div>
                     <label for="lastname">성</label>
-                    <input type="text" id="lastname" class="wide"></div>
+                    <input type="text" id="lastname" class="wide" autocomplete="none"></div>
                 <div>
                     <label for="firstname">이름</label>
-                    <input type="text" id="firstname" class="wide"></div>
+                    <input type="text" id="firstname" class="wide" autocomplete="none"></div>
                 <div id="birth">
                     <label for="birthday">생일</label>
-                    <input type="Text" id="birthday">
+                    <input type="Text" id="birthday" autocomplete="none">
                     <svg class="w-6 h-6 birth" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -209,7 +212,7 @@
                 <div class="phone">
                     <small for="phone">휴대폰</small>
                     <p>KR(+82)</p>
-                    <input type="text" id="phone" class="wide">
+                    <input type="text" id="phone" class="wide" autocomplete="none">
                 </div>
                 <div class="sex">
                     <select class="short">
@@ -365,17 +368,29 @@
     });
 
     function menu_open() {
-        if ($('#menu_aside').css('display') == 'none') {
-            $('#menu_aside').show()
-        }
-    }
+        $('#menu_aside').show()
+        $('#menu_aside').css('animation-name', 'scale-in-hor-left')
 
+    }
 
     function menu_close() {
-        if ($('#menu_aside').css('display') == 'flex') {
-            $('#menu_aside').hide()
+        $('#menu_aside').css('animation-name', 'scale-out-hor-left')
+    }
+
+    function no() {
+        if ($("#no").is(":checked") == true) {
+            $('#chked_yes').hide()
+            $('#chked_no').show()
         }
     }
+
+    function yes() {
+        if ($("#yes").is(":checked") == true) {
+            $('#chked_yes').show()
+            $('#chked_no').hide()
+        }
+    }
+
 </script>
 
 </body>

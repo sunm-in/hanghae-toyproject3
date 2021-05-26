@@ -64,7 +64,7 @@ svg {
     position: absolute;
     background-color: white;
     height: 100%;
-    animation: scale-in-hor-left 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: 0.3s both;
 }
 
 @keyframes scale-in-hor-left {
