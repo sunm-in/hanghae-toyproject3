@@ -35,7 +35,7 @@
                       d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
             </svg>
         </button>
-        <button class="right-btn__close" id="close-btn">
+        <button class="right-btn__close" id="close-btn" onclick="right_close()">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                  xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -182,7 +182,7 @@
                     </div>
                     <div class="count-list">0 개의 제품</div>
                     <div id="list-wrap__btn">
-                        <button style="outline: none" type="button" class="list-btn" id="list-btn" onclick="show()">
+                        <button style="outline: none" type="button" class="list-btn" id="list-btn" onclick="right_open()">
                         <span>
                             <svg class="w-6 h-6 list-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -274,19 +274,24 @@
 
 
 <script>
-    function show() {
+    function right_open() {
         var right_menu = document.getElementById('right-menu');
+        var screen_color = document.getElementById('wishlist-screen')
         right_menu.style.visibility = 'visible';
+
+        $('#right-menu').show();
+        screen_color.style.filter = 'opacity(0.7)'
     }
 
-    $('#close-btn').click(function () {
-        $("#right-menu").hide();
-    })
+    function right_close() {
+        var screen_color = document.getElementById('wishlist-screen')
+
+        $('#right-menu').hide();
+        screen_color.style.filter = 'opacity(1)'
+    }
 
     $(document).ready(function () {
-        $("#list-btn").click(function () {
-            $("#right-menu").toggle();
-        });
+        $('#right-menu').hide();
     });
 
 
