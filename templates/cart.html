@@ -48,13 +48,13 @@
         </svg>
         <a href="#">IKEA 베스트셀러</a>
     </div>
-</div>
-<input type="checkbox" id="menuicon">
-<label for="menuicon">
+</div> <!--최상단메뉴-->
+<input type="checkbox" id="menuicon"> <!--네비게이션 바-->
+<label for="menuicon" style="position: fixed;">
     <span></span>
     <span></span>
     <span></span>
-</label>
+</label> <!--네비게이션 바-->
 <div class="sidebar">
     <div id="nav"> <!--navbar-->
         <p class="nav-text" style="color: black; font-size: 35px;"><a href="#">모든 제품</a></p>
@@ -72,13 +72,13 @@
         <p class="small-text"><a>배송조회</a></p>
         <p class="small-text"><a>내 프로필</a></p>
     </div>
-</div>
-<div class="top-menu">
+</div> <!--네비게이션 바 펼쳤을 때-->
+<div class="top-menu" style="margin-top: -13px;">
     <div class="top-menu__element top-start">
         <a href="#"><img width="90vh" src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
         <a href="#">모든 제품</a>
         <a href="#">디지털 쇼룸</a>
-    </div>
+    </div> <!--2번째 상단-->
     <div class="top-menu__element searchbar">
         <span>
         <svg class="search" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -94,7 +94,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
         </svg></span>
-    </div>
+    </div> <!--검색창-->
     <div class="top-menu__element top-end">
         <a href="#">
             <svg class="w-6 h-6 top-menu__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -125,15 +125,85 @@
                       d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
             </svg>
         </a>
-    </div>
+    </div> <!--메뉴아이콘-->
 
-</div>
-<div class="noproducts">
+</div> <!-- 두번째 상단-->
+<div class="noproducts"> <!--장바구니목록 및 추천제품-->
     <h4 class="cart-message" style="margin-bottom: 80px;">장바구니가 비어있습니다</h4>
     <hr>
     <h4 class="cart-message" style="margin-top: 6vh;">추천제품</h4>
     <!--추천제품 시작-->
-    <div class="recommendation recommendation-image"> <!--추천제품 카드-->
+    <div class="recommendation recommendation-image" style="overflow-x: auto;"> <!--추천제품 카드-->
+        <div class-="item-list">
+            <img class="item-image"
+                 src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
+                 onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911653_pe616502_s5.jpg?f=xl'"
+                 onmouseout="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl'"
+                 border="0">
+            <p class="item-name item-desc">HYLLIS 휠리스</p>
+            <p class="desc item-desc">선반유닛,60x27x140 cm</p>
+            <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+        </div>
+        <div class-="item-list">
+            <img class="item-image"
+                 src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
+                 onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911653_pe616502_s5.jpg?f=xl'"
+                 onmouseout="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl'"
+                 border="0">
+            <p class="item-name item-desc">HYLLIS 휠리스</p>
+            <p class="desc item-desc">선반유닛,60x27x140 cm</p>
+            <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+        </div>
+        <div class-="item-list">
+            <img class="item-image"
+                 src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
+                 onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911653_pe616502_s5.jpg?f=xl'"
+                 onmouseout="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl'"
+                 border="0">
+            <p class="item-name item-desc">HYLLIS 휠리스</p>
+            <p class="desc item-desc">선반유닛,60x27x140 cm</p>
+            <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+        </div>
+        <div class-="item-list">
+            <img class="item-image"
+                 src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
+                 onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911653_pe616502_s5.jpg?f=xl'"
+                 onmouseout="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl'"
+                 border="0">
+            <p class="item-name item-desc">HYLLIS 휠리스</p>
+            <p class="desc item-desc">선반유닛,60x27x140 cm</p>
+            <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+        </div>
+        <div class-="item-list">
+            <img class="item-image"
+                 src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
+                 onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911653_pe616502_s5.jpg?f=xl'"
+                 onmouseout="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl'"
+                 border="0">
+            <p class="item-name item-desc">HYLLIS 휠리스</p>
+            <p class="desc item-desc">선반유닛,60x27x140 cm</p>
+            <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+        </div>
+        <div class-="item-list">
+            <img class="item-image"
+                 src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
+                 onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911653_pe616502_s5.jpg?f=xl'"
+                 onmouseout="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl'"
+                 border="0">
+            <p class="item-name item-desc">HYLLIS 휠리스</p>
+            <p class="desc item-desc">선반유닛,60x27x140 cm</p>
+            <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+        </div>
+        <div class-="item-list">
+            <img class="item-image"
+                 src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
+                 onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911653_pe616502_s5.jpg?f=xl'"
+                 onmouseout="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl'"
+                 border="0">
+            <p class="item-name item-desc">HYLLIS 휠리스</p>
+            <p class="desc item-desc">선반유닛,60x27x140 cm</p>
+            <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+        </div>
         <div class-="item-list">
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
@@ -145,7 +215,69 @@
             <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
         </div>
     </div>
-</div>
+</div><!--장바구니목록 및 추천제품-->
+<footer>
+    <div id="footer">
+        <div>
+            <h3>IKEA Family</h3>
+            <p>지금 IKEA Family에 무료로 가입하고<br>
+                다양한 멤버 전용 혜택을 누리세요. <a href="https://www.ikea.com/kr/ko/ikea-family/"><span
+                        style="text-decoration: underline">자세히 보기</span></a></p>
+            <button class="btn_family">IKEA Family 가입하기</button>
+        </div>
+        <div>
+            <p class="title">고객문의</p>
+            <div>
+                <p>고객지원</p>
+                <p>자주 묻는 질문</p>
+                <p>문의하기</p>
+                <p>배송조회</p>
+                <p>교환환불</p>
+                <p>품질보증</p>
+                <p>제품리콜</p>
+                <p>제품 구매 가이드</p>
+                <p>피드백</p>
+            </div>
+        </div>
+        <div>
+            <p class="title">쇼핑하기</p>
+            <div>
+                <p>쇼핑하기</p>
+                <p>전화 주문</p>
+                <p>IKEA for Business</p>
+                <p>셀프 플래닝</p>
+                <p>IKEA 모바일 앱</p>
+                <p>IKEA 카탈로그</p>
+                <p>제품 사용 팁/가이드</p>
+                <p>결제 옵션</p>
+                <p>기프트 카드</p>
+            </div>
+        </div>
+        <div>
+            <p class="title">서비스</p>
+            <div>
+                <p>IKEA 서비스</p>
+                <p>배송 서비스</p>
+                <p>조립 서비스</p>
+                <p>주방 서비스</p>
+                <p>욕실 서비스</p>
+                <p>홈퍼니싱 플래닝 서비스</p>
+                <p>인테리어 디자인 서비스</p>
+                <p>바이백 서비스</p>
+            </div>
+        </div>
+        <div>
+            <p class="title">IKEA 이야기</p>
+            <div>
+                <p>기업 소개</p>
+                <p>데모크래틱 디자인</p>
+                <p>지속가능한 생활</p>
+                <p>뉴스</p>
+                <p>채용정보</p>
+            </div>
+        </div>
+    </div>
+</footer> <!--footer-->
 
 
 </body>
