@@ -294,6 +294,7 @@ h3 {
     background-color: white;
     z-index: 1;
     overflow: hidden;
+    visibility: hidden;
 }
 
 .right-btn__icon {
@@ -393,6 +394,10 @@ h3 {
     cursor: pointer;
 }
 
+#wishlist-screen {
+
+    /*z-index: 3;*/
+}
 /*----- -----   -----   -----   -----*/
 @media screen and (max-width: 1200px) {
     body {width: 100vw;}
