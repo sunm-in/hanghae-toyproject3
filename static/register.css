@@ -60,12 +60,12 @@ label {
 
 /*--------------aside-------------------*/
 .menu_aside {
+    position: fixed;
     display: flex;
     flex-direction: column;
     width: 480px;
     padding: 0px 32px 0px 30px;
     z-index: 2;
-    position: absolute;
     background-color: white;
     height: 100%;
     animation: 0.3s both;
