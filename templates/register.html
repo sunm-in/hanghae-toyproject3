@@ -194,28 +194,34 @@
                     <label for="no">아니요, 추가 혜택 없이 온라인 몰만 가입하고 싶습니다. <span>IKEA 온라인몰 혜택</span></label></div>
             </div>
             <div class="info">
-                <div>
-                    <label for="lastname">성</label>
-                    <input type="text" id="lastname" class="wide" autocomplete="none"></div>
-                <div>
-                    <label for="firstname">이름</label>
-                    <input type="text" id="firstname" class="wide" autocomplete="none"></div>
-                <div id="birth">
-                    <label for="birthday">생일</label>
-                    <input type="Text" id="birthday" autocomplete="none">
+                <div class="inputbox">
+                    <input type="text" autocomplete="none" required onclick="infoa()" id="personala">
+                    <span>성</span>
+                    <p id="fileda" class="filed">성 필드는 필수 필드입니다.</p>
+                </div>
+                <div class="inputbox">
+                    <input type="text" autocomplete="none" required onclick="infob()" id="personalb">
+                    <span>이름</span>
+                    <p id="filedb" class="filed">이름 필드는 필수 필드입니다.</p>
+                </div>
+                <div class="inputbox">
+                    <input type="text" autocomplete="none" required onclick="infoc()" id="personalc">
+                    <span>생일</span>
                     <svg class="w-6 h-6 birth" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
+                    <p id="filedc" class="filed">생일 필드는 필수 필드입니다.</p>
                 </div>
-                <div class="phone">
-                    <small for="phone">휴대폰</small>
+                <div class="phone inputbox">
+                    <small>휴대폰</small>
                     <p>KR(+82)</p>
-                    <input type="text" id="phone" class="wide" autocomplete="none">
+                    <input type="text" autocomplete="none" required onclick="infod()" id="personald">
+                    <p id="filedd" class="filed" style="padding-top: 0px">휴대폰 필드는 필수 필드입니다.</p>
                 </div>
-                <div class="sex">
-                    <select class="short">
+                <div class="sex inputbox">
+                    <select style="width: 410px">
                         <option selected>성별 (선택 사항)</option>
                         <option value="1">남성</option>
                         <option value="2">여성</option>
@@ -226,42 +232,50 @@
             </div>
             <div id="postal_code">
                 <button id="btn_postal">우편번호 찾기</button>
-                <div class="wide">
-                    <label for="street" style="color: #e0e0e0">도로명 주소</label>
-                    <input type="text" id="street" readonly class="wide"></div>
-                <div class="wide">
-                    <label for="addres">상세 주소</label>
-                    <input type="text" id="addres" class="wide"></div>
+                <div class="inputbox">
+                    <input type="text" readonly>
+                    <span style="color: #e0e0e0">도로명 주소</span></div>
+                <div class="inputbox">
+                    <input type="text" autocomplete="none" required onclick="infoe()" id="personale">
+                    <span>상세 주소</span>
+                    <p id="filede" class="filed" style="padding-top: 3px">상세 주소는 필수 필드입니다.</p>
+                </div>
+                <div class="inputbox">
+                    <span style="color: #e0e0e0">우편 번호</span>
+                    <input type="number" readonly style="width: 410px"></div>
+            </div>
+            <div>
+                <select id="shop" class="inputbox" style="width: 410px">
+                    <option selected>선호하는 매장</option>
+                    <option value="1">고양</option>
+                    <option value="2">광명</option>
+                    <option value="3">기흥</option>
+                    <option value="4">동부산</option>
+                </select>
+            </div>
+            <div class="email inputbox">
+                <input type="email" autocomplete="none" required onclick="infof()" id="personalf">
+                <span>이메일</span>
+                <p id="filedf" class="filed" style="padding-top: 3px">이메일 필드는 필수 필드입니다.</p>
+            </div>
+            <div class="pw inputbox" style="width: 410px">
+                <input type="password" autocomplete="none" required onclick="infog()" id="personalg">
+                <span>비밀번호</span>
                 <div>
-                    <label for="postal" style="color: #e0e0e0">우편 번호</label>
-                    <input type="number" id="postal" readonly class="short"></div>
-            </div>
-            <select id="shop" class="short">
-                <option selected>선호하는 매장</option>
-                <option value="1">고양</option>
-                <option value="2">광명</option>
-                <option value="3">기흥</option>
-                <option value="4">동부산</option>
-            </select>
-            <div class="email">
-                <label for="email">이메일</label>
-                <input type="email" id="email" class="wide">
-            </div>
-            <div class="pw">
-                <label for="pw">비밀번호</label>
-                <input type="password" id="pw" class="short">
-                <svg class="showpw" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                </svg>
-                <svg class="dontshowpw" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
-                </svg>
+                    <svg class="showpw pw_svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                    <svg class="dontshowpw pw_svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
+                    </svg>
+                </div>
+                <p id="filedg" class="filed" style="padding-top: 3px">비밀번호는 필수 필드입니다.</p>
             </div>
             <div>
                 <div id="chkbox">
@@ -364,7 +378,7 @@
 </div>
 <script>
     $(document).ready(function () {
-        $("#menu_aside").hide();
+        $("#menu_aside").css('display', 'none')
     });
 
     function menu_open() {
@@ -390,6 +404,66 @@
             $('#chked_no').hide()
         }
     }
+
+    // 필드값 각각 필수 입력
+    function infoa() {
+        let info = $('#personala').val()
+        if (info == '') {
+            $('#fileda').show()
+        }
+    }
+
+    $(function () {
+        $(document).mousedown(function (e) {
+            $('p[class=filed]').hide()
+        });
+    })
+
+    function infob() {
+        let info = $('#personalb').val()
+        if (info == '') {
+            $('#filedb').show()
+        }
+    }
+
+
+    function infoc() {
+        let info = $('#personalc').val()
+        if (info == '') {
+            $('#filedc').show()
+        }
+    }
+
+
+    function infod() {
+        let info = $('#personald').val()
+        if (info == '') {
+            $('#filedd').show()
+        }
+    }
+
+
+    function infoe() {
+        let info = $('#personale').val()
+        if (info == '') {
+            $('#filede').show()
+        }
+    }
+
+    function infof() {
+        let info = $('#personalf').val()
+        if (info == '') {
+            $('#filedf').show()
+        }
+    }
+
+    function infog() {
+        let info = $('#personalg').val()
+        if (info == '') {
+            $('#filedg').show()
+        }
+    }
+
 
 </script>
 
