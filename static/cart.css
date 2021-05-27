@@ -7,7 +7,9 @@ body {
     justify-content: center;
     background-color: black;
     height: 38px;
-} /*최상단 메뉴*/
+}
+
+/*최상단 메뉴*/
 
 .status-bar__element {
     display: flex;
@@ -40,32 +42,37 @@ body {
 .call {
     padding-right: 2rem;
 }
+
 /*최상단 메뉴 끝*/
 /*-------------------------------------*/
 /*-------------------------------------*/
 /*네비게이션 바 시작*/
 #nav p a {
     display: block;
-    padding: 7px 8px;
+    padding: 5px -3px;
     margin: 0;
     color: black;
     text-decoration: none; /*글자 밑줄 없애기*/
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);*/
 }
 
 #nav p:hover > a {
-    margin: 0;
-    padding: 5px;
+
+    /*padding: 5px;*/
     text-decoration: underline;
 }
 
 .nav-text {
     font-weight: bold;
     color: black;
+    margin-left: 150px;
+
 }
 
 .small-text {
     font-size: 15px;
+    margin-left: 150px;
+
 }
 
 input[id="menuicon"] {
@@ -115,6 +122,7 @@ input[id="menuicon"]:checked + label span {
 input[id="menuicon"]:checked + label span:nth-child(1) {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
+
 }
 
 input[id="menuicon"]:checked + label span:nth-child(2) {
@@ -135,13 +143,57 @@ div[class="sidebar"] {
     left: -500px;
     z-index: 1;
     transition: all .35s;
-    text-align: center;
 }
 
 input[id="menuicon"]:checked + label + div {
     left: 0;
 }
+
 /*네비게이션 바 끝*/
+/*-------------------------------------*/
+/*-------------------------------------*/
+/*모든제품 사이드 바*/
+.product_sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.35s ease-in-out;
+    background-color: white;
+}
+
+.product_sidebar a {
+    display: block;
+    padding: 5px -3px;
+    color: black;
+    text-decoration: none; /*글자 밑줄 없애기*/
+}
+.product_sidebar a:hover, p:hover{
+    text-decoration: underline;
+    color: #000;
+}
+.product_close{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 20px; !important;
+
+}
+.open_product:hover{
+    transition: 0.35s ease-in-out;
+}
+.open_product{
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.open_product > i{
+    font-size: 30px;
+}
+/*모든 제품 사이드바 끝*/
 /*-------------------------------------*/
 /*-------------------------------------*/
 /*상단 메뉴 시작*/
@@ -216,6 +268,7 @@ input[id="menuicon"]:checked + label + div {
     margin-left: 5vh;
     margin-top: 5px;
 }
+
 /*상단 메뉴 끝*/
 /*-------------------------------------*/
 /*-------------------------------------*/
@@ -250,6 +303,7 @@ input[id="menuicon"]:checked + label + div {
 .desc {
     font-size: 13px;
 }
+
 /*추천제품 끝*/
 /*-------------------------------------*/
 /*-------------------------------------*/
@@ -292,6 +346,7 @@ h3 {
     font-weight: bold;
     margin-bottom: 25px;
 }
+
 /*footer 끝*/
 /*-------------------------------------*/
 /*-------------------------------------*/
@@ -309,5 +364,6 @@ h3 {
     width: 240px;
     height: 100px;
 }
+
 /*추천제품 가로스크롤 끝*/
 /*-------------------------------------*/
