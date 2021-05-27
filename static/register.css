@@ -310,6 +310,14 @@ a:hover {
     float: right;
 }
 
+#personalc::placeholder {
+    color: transparent;
+}
+
+#personalc:focus::placeholder {
+    color: gray;
+}
+
 .phone p {
     position: absolute;
 }
