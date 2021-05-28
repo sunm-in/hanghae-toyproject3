@@ -228,8 +228,8 @@
                     <input type="text" autocomplete="none" required onclick="infod()" id="personald">
                     <p id="filedd" class="filed" style="padding-top: 0px">휴대폰 필드는 필수 필드입니다.</p>
                 </div>
-                <div class="sex inputbox">
-                    <select style="width: 410px">
+                <div class="gender inputbox">
+                    <select style="width: 410px" id="gender">
                         <option selected>성별 (선택 사항)</option>
                         <option value="1">남성</option>
                         <option value="2">여성</option>
@@ -264,7 +264,7 @@
                 </select>
             </div>
             <div class="email inputbox">
-                <input type="email" autocomplete="none" required onclick="infof()" id="personalf">
+                <input type="text" autocomplete="none" required onclick="infof()" id="personalf">
                 <span>이메일</span>
                 <p id="filedf" class="filed" style="padding-top: 3px">이메일 필드는 필수 필드입니다.</p>
             </div>
@@ -290,7 +290,8 @@
             <div>
                 <div id="chkbox">
                     <div>
-                        <input type="checkbox" name="adchk" onclick="adchk()"> <label>IKEA의 홈퍼니싱 아이디어와 신상품 소식, 그리고 할인 혜택 정보를 받고 싶어요!</label></div>
+                        <input type="checkbox" name="adchk" onclick="adchk()"> <label>IKEA의 홈퍼니싱 아이디어와 신상품 소식, 그리고 할인 혜택
+                        정보를 받고 싶어요!</label></div>
                     <div class="ad">
                         <div>
                             <input type="checkbox" name="ad_item" onclick="itemchk()"> <label>이메일 수신</label>
@@ -304,23 +305,23 @@
                     </div>
                 </div>
                 <div id="chkbox">
-                    <input type="checkbox"> <label>(필수) 약관을 모두 읽고 동의합니다. <a
+                    <input type="checkbox" id="agreea"  > <label>(필수) 약관을 모두 읽고 동의합니다. <a
                         href="https://www.ikea.com/kr/ko/customer-service/terms-conditions/"><span>이용약관</span></a></label>
                 </div>
                 <div id="chkbox">
-                    <input type="checkbox"> <label>(필수) 개인정보 수집ㆍ이용에 동의합니다. <a
+                    <input type="checkbox" id="agreeb"  > <label>(필수) 개인정보 수집ㆍ이용에 동의합니다. <a
                         href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/-pub20a57ecd"><span>개인정보 수집ㆍ이용 동의</span></a></label>
                 </div>
                 <div id="chkbox">
-                    <input type="checkbox"> <label>(필수) 개인정보 처리 위탁에 동의합니다. <a
+                    <input type="checkbox" id="agreec"  > <label>(필수) 개인정보 처리 위탁에 동의합니다. <a
                         href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/-pubadc349ed"><span>개인정보 처리 위탁</span></a></label>
                 </div>
                 <div id="chkbox">
-                    <input type="checkbox"> <label>(필수) 개인정보 국외이전에 동의합니다. <a
+                    <input type="checkbox" id="agreed"  > <label>(필수) 개인정보 국외이전에 동의합니다. <a
                         href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/-pub1c988c9a"><span>개인정보 국외이전</span></a></label>
                 </div>
             </div>
-            <button id="btn_letin">가입하기</button>
+            <button id="btn_letin" onclick="letin()">가입하기</button>
         </div>
     </div>
     <footer>
@@ -387,6 +388,47 @@
     </footer>
 </div>
 <script>
+    //회원가입
+    function letin() {
+        let lastname = $('#personala').val()
+        let firstname = $('#personalb').val()
+        let birthday = $('#personalc').val()
+        let phone = $('#personald').val()
+        let gender = $('#gender').val()
+        let addres = $('#personale').val()
+        let shop = $('#shop').val()
+        let email = $('#personalf').val()
+        let pw = $('#personalg').val()
+        let chka = $('#agreea').is(":checked")
+        let chkb = $('#agreeb').is(":checked")
+        let chkc = $('#agreec').is(":checked")
+        let chkd = $('#agreed').is(":checked")
+
+        $.ajax({
+            type: "POST",
+            url: "/register",
+            data: {
+                lastname: lastname, firstname: firstname, birthday: birthday,
+                phone: phone, gender: gender, addres: addres, shop: shop, email: email, pw: pw
+            },
+            success: function (response) {
+                if (lastname == '' || firstname == '' || birthday == '' || phone == '' || gender == '' ||
+                    addres == '' || shop == '' || email == '' || pw == '') {
+                    alert('모든 항목을 입력해주세요.')
+                } else if (email.includes('@') == false) {
+                    alert('이메일 양식에 맞게 작성해주세요.')
+                } else if (phone.includes('-')) {
+                    alert('휴대폰 번호는 숫자만 입력해주세요.')
+                } else if (chka == false || chkb == false || chkc == false || chkd == false) {
+                    alert('모든 필수 약관에 동의해주세요.')
+                } else {
+                    alert(response["msg"])
+                    window.location.href = '/login'
+                }
+            }
+        })
+    }
+
     $(document).ready(function () {
         $("#menu_aside").css('display', 'none')
     });
@@ -482,7 +524,7 @@
             $('.ballon').show()
         } else {
             $('.ballon').hide()
-       }
+        }
     }
 
     // 우편번호 > java이용? oncomplete 활성화가 안됨 ㅠ
@@ -536,34 +578,34 @@
 
     //비밀번호 보이고 숨기기
     function showpw() {
-        if ($('.dontshowpw').css('display')=='none') {
+        if ($('.dontshowpw').css('display') == 'none') {
             $('.dontshowpw').show()
             $('.showpw').hide()
-            $('#personalg').attr('type','text')
+            $('#personalg').attr('type', 'text')
         }
     }
 
-     function dontshowpw() {
-        if ($('.showpw').css('display')=='none') {
+    function dontshowpw() {
+        if ($('.showpw').css('display') == 'none') {
             $('.showpw').show()
             $('.dontshowpw').hide()
-            $('#personalg').attr('type','password')
+            $('#personalg').attr('type', 'password')
         }
     }
 
     function adchk() {
         if ($('input[name=adchk]').is(":checked")) {
-            $('input[name=ad_item]').prop('checked',true)
+            $('input[name=ad_item]').prop('checked', true)
         } else {
-            $('input[name=ad_item]').prop('checked',false)
+            $('input[name=ad_item]').prop('checked', false)
         }
     }
 
     function itemchk() {
         if ($('input[name=ad_item').is(":checked")) {
-            $('input[name=adchk]').prop('checked',true)
+            $('input[name=adchk]').prop('checked', true)
         } else {
-            $('input[name=adchk]').prop('checked',false)
+            $('input[name=adchk]').prop('checked', false)
         }
     }
 

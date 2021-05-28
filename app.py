@@ -10,7 +10,7 @@ db = client.dbhanghae3
 # 메인
 @app.route('/')
 def home():
-   return render_template('index.html')
+    return render_template('index.html')
 
 
 # 로그인
@@ -20,9 +20,30 @@ def login():
 
 
 # 회원가입
-@app.route('/register')
+app.config["SECRET_KEY"] = "team2"
+
+
+@app.route('/register', methods=["GET", "POST"])
 def register():
-    return render_template('register.html')
+    if request.method == "GET":
+        return render_template('register.html')
+    else:
+        lastname = request.form['lastname']
+        firstname = request.form['firstname']
+        birthday = request.form['birthday']
+        phone = request.form['phone']
+        gender = request.form['gender']
+        addres = request.form['addres']
+        shop = request.form['shop']
+        email = request.form['email']
+        pw = request.form['pw']
+
+        doc = {'lastname': lastname, 'firstname': firstname, 'birthday': birthday, 'phone': phone,
+               'gender': gender, 'addres': addres, 'shop': shop, 'email': email, 'pw': pw}
+
+        db.ikea.insert_one(doc)
+
+        return jsonify({'msg': '회원가입이 완료되었습니다. 로그인을 진행해주세요.'})
 
 
 # 위시리스트
@@ -38,4 +59,4 @@ def cart():
 
 
 if __name__ == '__main__':
-   app.run('0.0.0.0',port=5000,debug=True)
+    app.run('0.0.0.0', port=5000, debug=True)

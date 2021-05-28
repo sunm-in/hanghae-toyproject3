@@ -366,21 +366,21 @@ a:hover {
     border-bottom: 1px solid black;
 }
 
-.sex {
+.gender {
     padding-right: 0px;
     margin-top: 80px;
 }
 
-.sex select {
+.gender select {
     border: none;
     border-bottom: 2px #1e3799 solid;
 }
 
-.sex select:focus {
+.gender select:focus {
     outline: none;
 }
 
-.sex small {
+.gender small {
     width: 416px;
     display: block;
     margin-top: 10px;
@@ -486,6 +486,10 @@ a:hover {
     font-weight: bold;
     border: none;
     border-radius: 40px;
+}
+
+#btn_letin:focus {
+    outline: none;
 }
 
 /* -----    -----  body 끝 -----   ----- */
