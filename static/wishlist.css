@@ -360,32 +360,45 @@ h3 {
 /* 왼쪽 메뉴 끝 */
 /* 오른쪽 메뉴 */
 .right-menu {
-    background-color: sandybrown;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    z-index: 1;
-    width: 470px;
+    z-index: 2;
+    width: 0;
     height: 100%;
+    overflow-x: hidden;
+    transition: 0.3s;
+    position: fixed;
+
+    /*background-color: white;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*position: fixed;*/
+    /*z-index: 1;*/
+    /*width: 0;*/
+    /*height: 100%;*/
+    /*transition: 0.2s;*/
+    /*overflow-x: hidden;*/
 }
 
 .right-menu__icon {
     display: flex;
     justify-content: space-between;
     padding: 30px;
-    cursor: pointer;
 }
 .right-back {
     border: none;
     border-radius: 50%;
     background-color: transparent;
     padding-top: 5px;
+    cursor: pointer;
 }
 .right-close {
     border: none;
     border-radius: 50%;
     background-color: transparent;
     padding-top: 5px;
+    cursor: pointer;
 }
 .right-menu__icon button:hover {
     background-color: whitesmoke;
@@ -393,10 +406,58 @@ h3 {
 
 .right-menu__title {
     padding: 30px;
-    background-color: #929292;
 }
-.right-menu__title
+.right-menu__title h3 {
+    font-size: 26px;
+}
 
+.right-menu__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: -3vh;
+}
+
+.right-menu__item {
+    display: flex;
+    flex-direction: row;
+}
+.right-menu__item a {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+.right-menu__selected {
+    color: #005399;
+    background-color: #dff9fb;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 7px;
+    margin-left: 1vh;
+}
+.right-menu__count {
+    font-size: 12px;
+}
+
+.list-copy {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 13px;
+    background-color: transparent;
+}
+.list-copy:hover {
+    background-color: whitesmoke;
+}
+
+#list-content {
+    background-color: whitesmoke;
+    width: 90%;
+    height: 30vh;
+    margin: 0 auto;
+    cursor: pointer;
+}
 
 
 
