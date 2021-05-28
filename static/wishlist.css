@@ -282,122 +282,125 @@ h3 {
     color: black;
 }
 /*----- -----   -----   -----   -----*/
-/* right-menu */
-#right-menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 30px;
-    width: 33%;
+/* 왼쪽 메뉴 */
+.left-menu {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
     z-index: 1;
-    overflow: hidden;
-    visibility: hidden;
+    width: 0;
+    height: 100%;
+    transition: 0.2s;
+    overflow-x: hidden;
 }
 
-.right-btn__icon {
+.left-close {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    padding-top: 4px;
+}
+.left-close:hover {
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+.left-menu__icon {
     display: flex;
     justify-content: space-between;
+    width: 200px;
+    margin: 3vh 0 8vh 7vh;
 }
 
-.right-btn__back {
-    width: 34px;
-    height: 34px;
-    padding-top: 5px;
-    border: none;
-    border-radius: 50%;
-    background-color: transparent;
-}
-.right-btn__close {
-    width: 34px;
-    height: 34px;
-    padding-top: 5px;
-    border: none;
-    border-radius: 50%;
-    background-color: transparent;
+.left-menu__link {
+    /*width: 50%;*/
+    margin: auto;
 }
 
-.right-btn__icon button:hover {
-    background-color: whitesmoke;
+.left-menu__top {
+    font-size: 36px;
+    font-weight: bold;
+}
+.left-menu__middle {
+    font-size: 15px;
+    font-weight: bold;
+}
+.left-menu__bottom {
+    margin-top: 6vh;
+    font-size: 15px;
+}
+.left-menu__bottom p {
+    margin-bottom: 1vh;
+}
+
+.left-menu__language {
+    margin-top: 10vh;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+.language {
+    border: lightgrey solid 1px;
+    border-radius: 20px;
+    padding: 10px;
+    width: 95px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.country {
+    width: 95px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 13px;
+    border: lightgrey solid 1px;
+    border-radius: 20px;
+}
+/* 왼쪽 메뉴 끝 */
+/* 오른쪽 메뉴 */
+.right-menu {
+    background-color: sandybrown;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    width: 470px;
+    height: 100%;
+}
+
+.right-menu__icon {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
     cursor: pointer;
 }
-.right-btn__icon button:focus {
-    outline: none;
+.right-back {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    padding-top: 5px;
+}
+.right-close {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    padding-top: 5px;
+}
+.right-menu__icon button:hover {
+    background-color: whitesmoke;
 }
 
 .right-menu__title {
-    margin-top: 7vh;
+    padding: 30px;
+    background-color: #929292;
 }
+.right-menu__title
 
-.change {
-    font-weight: bold;
-    font-size: 28px;
-}
-/*  */
-.header-box {
-    list-style: none;
-    padding: 0;
-    margin-top: 5vh;
-}
 
-.right-menu__header {
-    display: flex;
-    justify-content: space-between;
-}
 
-.right-list__box {
-    display: flex;
-    flex-direction: column;
-}
 
-.listName-box {
-    display: flex;
-    align-items: center;
-}
-.listName {
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    margin-right: 1vh;
-}
-.selectedList {
-    font-weight: bold;
-    font-size: 16px;
-    background-color: #dff9fb;
-    color: #1e3799;
-    padding: 2px;
-}
-.list-count {
-    font-size: 12px;
-}
-.edit-btn {
-    width: 34px;
-    height: 34px;
-    padding-top: 5px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: transparent;
-}
-.edit-btn:hover {
-    background-color: whitesmoke;
-}
 
-.right-content__box {
-    position: relative;
-    padding-bottom: 20%;
-    margin-top: 2vh;
-    background-color: whitesmoke;
-    height: 0;
-    cursor: pointer;
-}
-
-#wishlist-screen {
-
-    /*z-index: 3;*/
-}
 /*----- -----   -----   -----   -----*/
 @media screen and (max-width: 1200px) {
     body {width: 100vw;}
