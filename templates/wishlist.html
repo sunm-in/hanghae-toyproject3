@@ -72,12 +72,15 @@
 <div id="rightMenu" class="right-menu">
     <div class="right-menu__icon">
         <button class="right-back" style="outline: none" onclick="rightClose()">
-            <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
             </svg>
         </button>
         <button class="right-close" style="outline: none" onclick="rightClose()">
-            <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
@@ -85,7 +88,7 @@
     <div class="right-menu__title">
         <h3>위시리스트 수정</h3>
     </div>
-    <div class="right-menu__top">
+    <div class="right-menu__top" id="right-menu__top">
         <div class="right-menu__item">
             <div>
                 <div class="right-menu__list">
@@ -100,11 +103,38 @@
             </div>
         </div>
         <div class="right-menu__copy">
-            <button class="list-copy" style="outline: none">
-                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+            <button class="list-copy" style="outline: none" onclick="listCopy()">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                 </svg>
             </button>
+        </div>
+    </div>
+    <div id="change-wrap">
+        <div>
+            <input type="text" id="list-form" value="위시리스트" maxlength="10">
+            <label for="list-form"></label>
+        </div>
+        <div class="change-icon">
+            <div>
+                <button class="copy-btn">
+                    <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <button class="close-btn" onclick="closeCopy">
+                    <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
     <div id="list-content"></div>
@@ -216,7 +246,8 @@
                     </div>
                     <div class="count-list">0 개의 제품</div>
                     <div id="list-wrap__btn">
-                        <button style="outline: none" type="button" class="list-btn" id="list-btn" onclick="rightOpen()">
+                        <button style="outline: none" type="button" class="list-btn" id="list-btn"
+                                onclick="rightOpen()">
                         <span>
                             <svg class="w-6 h-6 list-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -335,7 +366,22 @@
         document.getElementById('rightMenu').style.width = "470px";
     }
 
+    $(document).ready(function () {
+        $("#change-wrap").css('display', 'none')
+    });
 
+    function listCopy() {
+        if ($('#change-wrap').css('display') == 'none') {
+            $('#right-menu__top').hide();
+            $('#change-wrap').show();
+        } else {
+            $('#change-wrap').hide();
+        }
+    }
+
+    // function closeCopy() {
+    //     $('#right-menu__top').show();
+    // }
 
 </script>
 </body>
