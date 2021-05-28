@@ -71,12 +71,12 @@
 <!--  오른쪽 메뉴  -->
 <div id="rightMenu" class="right-menu">
     <div class="right-menu__icon">
-        <button class="right-back">
+        <button class="right-back" style="outline: none" onclick="rightClose()">
             <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
             </svg>
         </button>
-        <button class="right-close">
+        <button class="right-close" style="outline: none" onclick="rightClose()">
             <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
@@ -89,18 +89,18 @@
         <div class="right-menu__item">
             <div>
                 <div class="right-menu__list">
-                    <a>위시리스트</a>
+                    <a href="#">위시리스트</a>
                 </div>
-                <div class="right-menu__selected">
-                    <span>선택된 목록</span>
+                <div>
+                    <p class="right-menu__count">0 개의 제품</p>
                 </div>
             </div>
             <div>
-                <p class="right-menu__count">0 개의 제품</p>
+                <span class="right-menu__selected">선택된 목록</span>
             </div>
         </div>
         <div class="right-menu__copy">
-            <button class="list-copy">
+            <button class="list-copy" style="outline: none">
                 <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                 </svg>
@@ -109,6 +109,7 @@
     </div>
     <div id="list-content"></div>
 </div>
+<!--  오른쪽 메뉴 끝  -->
 <div id="wishlist-screen">
     <div class="status-bar">
         <div class="status-bar__element">
@@ -215,7 +216,7 @@
                     </div>
                     <div class="count-list">0 개의 제품</div>
                     <div id="list-wrap__btn">
-                        <button style="outline: none" type="button" class="list-btn" id="list-btn">
+                        <button style="outline: none" type="button" class="list-btn" id="list-btn" onclick="rightOpen()">
                         <span>
                             <svg class="w-6 h-6 list-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -316,9 +317,25 @@
     function leftOpen() {
         var screen_opacity = document.getElementById('wishlist-screen');
 
-        screen_opacity.style.filter = 'opacity(0.6)'
+        screen_opacity.style.filter = 'opacity(0.6)';
         document.getElementById("leftMenu").style.width = "460px";
     }
+
+    function rightClose() {
+        var screen_opacity = document.getElementById('wishlist-screen');
+
+        screen_opacity.style.filter = 'opacity(1)';
+        document.getElementById('rightMenu').style.width = "0";
+    }
+
+    function rightOpen() {
+        var screen_opacity = document.getElementById('wishlist-screen');
+
+        screen_opacity.style.filter = 'opacity(0.6)';
+        document.getElementById('rightMenu').style.width = "470px";
+    }
+
+
 
 </script>
 </body>
