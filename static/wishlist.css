@@ -450,6 +450,41 @@ h3 {
     cursor: pointer;
 }
 
+#change-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+}
+#list-form {
+    width: 300px;
+    outline: none;
+    border: none;
+    border-bottom: black solid 1px;
+}
+#list-form:focus {
+    border-bottom: #1e3799 solid 2px; !important;
+}
+
+.change-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 110px;
+}
+.change-icon button {
+    border: none;
+    border-radius: 50%;
+    padding: 12px 15px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+}
+.change-icon button:hover {
+    background-color: whitesmoke;
+}
 
 
 
