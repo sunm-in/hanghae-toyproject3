@@ -85,16 +85,16 @@ label {
 }
 
 @keyframes scale-out-hor-left {
-  0% {
-    transform: scaleX(1);
-    transform-origin: 0 0;
-    opacity: 1;
-  }
-  100% {
-    transform: scaleX(0);
-    transform-origin: 0 0;
-    opacity: 1;
-  }
+    0% {
+        transform: scaleX(1);
+        transform-origin: 0 0;
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        opacity: 1;
+    }
 }
 
 .zbody {
@@ -260,7 +260,7 @@ a:hover {
     position: relative;
     width: 630px;
     height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .inputbox input {
@@ -286,7 +286,7 @@ a:hover {
 }
 
 .inputbox input:focus ~ span,
-.inputbox input:valid ~ span{
+.inputbox input:valid ~ span {
     transform: translateY(-20px);
     font-size: 13px;
 }
@@ -308,6 +308,38 @@ a:hover {
 .birth {
     position: relative;
     float: right;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.birth:focus {
+    outline: none;
+}
+
+.ballon {
+    display: none;
+    position: absolute;
+    width: 205px;
+    height: 40px;
+    left: 448px;
+    bottom: 62px;
+    background: #484848;
+    color: white;
+    border-radius: 5px;
+    padding: 12px 12.8px;
+}
+
+
+.ballon:after {
+    border-top: 10px solid #484848;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 160px;
 }
 
 #personalc::placeholder {
@@ -336,6 +368,7 @@ a:hover {
 
 .sex {
     padding-right: 0px;
+    margin-top: 80px;
 }
 
 .sex select {
@@ -368,6 +401,10 @@ a:hover {
     margin-bottom: 50px;
 }
 
+#btn_postal:focus {
+    outline: none;
+ }
+
 #postal_code div {
     padding: 24px 32px 1px 0px;
     margin-bottom: 40px;
@@ -389,17 +426,24 @@ a:hover {
 /*회원가입 - 이메일*/
 .email {
     padding: 24px 32px 1px 0px;
-    margin: 50px 0px;
+    margin: 40px 0px;
 }
 
 /*회원가입 - 비밀번호*/
 .pw {
-    margin-bottom: 40px;
+    margin: 60px 0px;
 }
 
 .pw_svg {
     position: relative;
     float: right;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.pw_svg:focus {
+    outline: none;
 }
 
 .dontshowpw {

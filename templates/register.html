@@ -19,6 +19,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+    <!-- 다음 우편번호 찾기 api-->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
     <link rel="stylesheet" href="../static/register.css">
     <link rel="stylesheet" media="screen and (max-width: 1200px)" href="../static/register_1200px.css"/>
@@ -205,14 +207,20 @@
                     <p id="filedb" class="filed">이름 필드는 필수 필드입니다.</p>
                 </div>
                 <div class="inputbox">
-                    <input type="text" autocomplete="none" required onclick="infoc()" id="personalc" placeholder="YYYY-MM-DD">
-                    <span>생일</span>
-                    <svg class="w-6 h-6 birth" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <p id="filedc" class="filed">생일 필드는 필수 필드입니다.</p>
+                    <small class="ballon">만 14세 이상만 가입할 수 있습니다.</small>
+                    <div>
+                        <input type="text" autocomplete="none" required onclick="infoc()" id="personalc"
+                               placeholder="YYYY-MM-DD">
+                        <span>생일</span>
+                        <button class="birth" onclick="birth()">
+                            <svg class="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </button>
+                        <p id="filedc" class="filed">생일 필드는 필수 필드입니다.</p>
+                    </div>
                 </div>
                 <div class="phone inputbox">
                     <small>휴대폰</small>
@@ -231,9 +239,9 @@
                 </div>
             </div>
             <div id="postal_code">
-                <button id="btn_postal">우편번호 찾기</button>
+                <button id="btn_postal" onclick="sample6_execDaumPostcode()">우편번호 찾기</button>
                 <div class="inputbox">
-                    <input type="text" readonly>
+                    <input type="text" autocomplete="none" required readonly id="sample6_address">
                     <span style="color: #e0e0e0">도로명 주소</span></div>
                 <div class="inputbox">
                     <input type="text" autocomplete="none" required onclick="infoe()" id="personale">
@@ -241,8 +249,10 @@
                     <p id="filede" class="filed" style="padding-top: 3px">상세 주소는 필수 필드입니다.</p>
                 </div>
                 <div class="inputbox">
+                    <input type="number" readonly style="width: 410px" id="sample6_postcode" autocomplete="none"
+                           required>
                     <span style="color: #e0e0e0">우편 번호</span>
-                    <input type="number" readonly style="width: 410px"></div>
+                </div>
             </div>
             <div>
                 <select id="shop" class="inputbox" style="width: 410px">
@@ -261,35 +271,35 @@
             <div class="pw inputbox" style="width: 410px">
                 <input type="password" autocomplete="none" required onclick="infog()" id="personalg">
                 <span>비밀번호</span>
-                <div>
-                    <svg class="showpw pw_svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
+                <button class="pw_svg">
+                    <svg class="showpw" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg" onclick="showpw()">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                     </svg>
                     <svg class="dontshowpw pw_svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
+                         xmlns="http://www.w3.org/2000/svg" onclick="dontshowpw()">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
                     </svg>
-                </div>
-                <p id="filedg" class="filed" style="padding-top: 3px">비밀번호는 필수 필드입니다.</p>
+                </button>
+                <p id="filedg" class="filed" style="padding-top: 30px">비밀번호는 필수 필드입니다.</p>
             </div>
             <div>
                 <div id="chkbox">
                     <div>
-                        <input type="checkbox"> <label>IKEA의 홈퍼니싱 아이디어와 신상품 소식, 그리고 할인 혜택 정보를 받고 싶어요!</label></div>
+                        <input type="checkbox" name="adchk" onclick="adchk()"> <label>IKEA의 홈퍼니싱 아이디어와 신상품 소식, 그리고 할인 혜택 정보를 받고 싶어요!</label></div>
                     <div class="ad">
                         <div>
-                            <input type="checkbox"> <label>이메일 수신</label>
+                            <input type="checkbox" name="ad_item" onclick="itemchk()"> <label>이메일 수신</label>
                         </div>
                         <div>
-                            <input type="checkbox"> <label>문자 수신</label>
+                            <input type="checkbox" name="ad_item" onclick="itemchk()"> <label>문자 수신</label>
                         </div>
                         <div>
-                            <input type="checkbox"> <label>우편물 수신</label>
+                            <input type="checkbox" name="ad_item" onclick="itemchk()"> <label>우편물 수신</label>
                         </div>
                     </div>
                 </div>
@@ -381,6 +391,7 @@
         $("#menu_aside").css('display', 'none')
     });
 
+    //사이드바 여닫기
     function menu_open() {
         $('#menu_aside').show()
         $('#menu_aside').css('animation-name', 'scale-in-hor-left')
@@ -391,6 +402,7 @@
         $('#menu_aside').css('animation-name', 'scale-out-hor-left')
     }
 
+    //패밀리 가입 여부에 따른 회원가입 타이틀 변경
     function no() {
         if ($("#no").is(":checked") == true) {
             $('#chked_yes').hide()
@@ -461,6 +473,97 @@
         let info = $('#personalg').val()
         if (info == '') {
             $('#filedg').show()
+        }
+    }
+
+    // 생일 연령 제한
+    function birth() {
+        if ($('.ballon').css('display') == 'none') {
+            $('.ballon').show()
+        } else {
+            $('.ballon').hide()
+       }
+    }
+
+    // 우편번호 > java이용? oncomplete 활성화가 안됨 ㅠ
+    function sample6_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function (data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var addr = ''; // 주소 변수
+                var extraAddr = ''; // 참고항목 변수
+
+                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    addr = data.roadAddress;
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    addr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                if (data.userSelectedType === 'R') {
+                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                    if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                    if (data.buildingName !== '' && data.apartment === 'Y') {
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                    if (extraAddr !== '') {
+                        extraAddr = ' (' + extraAddr + ')';
+                    }
+                    // 조합된 참고항목을 해당 필드에 넣는다.
+                    document.getElementById("sample6_extraAddress").value = extraAddr;
+
+                } else {
+                    document.getElementById("sample6_extraAddress").value = '';
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('sample6_postcode').value = data.zonecode;
+                document.getElementById("sample6_address").value = addr;
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById("personale").focus();
+            }
+        }).open();
+    }
+
+    //비밀번호 보이고 숨기기
+    function showpw() {
+        if ($('.dontshowpw').css('display')=='none') {
+            $('.dontshowpw').show()
+            $('.showpw').hide()
+            $('#personalg').attr('type','text')
+        }
+    }
+
+     function dontshowpw() {
+        if ($('.showpw').css('display')=='none') {
+            $('.showpw').show()
+            $('.dontshowpw').hide()
+            $('#personalg').attr('type','password')
+        }
+    }
+
+    function adchk() {
+        if ($('input[name=adchk]').is(":checked")) {
+            $('input[name=ad_item]').prop('checked',true)
+        } else {
+            $('input[name=ad_item]').prop('checked',false)
+        }
+    }
+
+    function itemchk() {
+        if ($('input[name=ad_item').is(":checked")) {
+            $('input[name=adchk]').prop('checked',true)
+        } else {
+            $('input[name=adchk]').prop('checked',false)
         }
     }
 
