@@ -26,55 +26,88 @@
 </head>
 
 <body>
-<div id="right-menu">
-    <div class="right-btn__icon">
-        <button class="right-btn__back" id="back-btn">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+<!--  왼쪽 메뉴  -->
+<div id="leftMenu" class="left-menu">
+    <div class="left-menu__icon">
+        <button style="outline: none" class="left-close" onclick="leftClose()">
+            <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                  xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
-        <button class="right-btn__close" id="close-btn" onclick="right_close()">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                 xmlns="http://www.w3.org/2000/svg">
+        <img style="margin-right: 4vh" width="90vh"
+             src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg">
+    </div>
+    <div class="left-menu__link">
+        <div class="left-menu__top">
+            <p>모든 제품</p>
+            <p>디지털 쇼룸</p>
+        </div>
+        <div class="left-menu__middle">
+            <p>할인 중</p>
+            <p>신제품</p>
+            <p>더 낮은 새로운 가격</p>
+            <p>아이디어</p>
+            <p>IKEA Live</p>
+            <p>새로운 소식</p>
+        </div>
+        <div class="left-menu__bottom">
+            <p>매장안내</p>
+            <p>IKEA Family</p>
+            <p>고객지원</p>
+            <p>배송조회</p>
+            <p>내 프로필</p>
+        </div>
+        <div class="left-menu__language">
+            <select class="language">
+                <option>한국어</option>
+                <option>English</option>
+            </select>
+            <a class="country">국가 변경</a>
+        </div>
+    </div>
+</div>
+<!--  왼쪽 메뉴 끝  -->
+<!--  오른쪽 메뉴  -->
+<div id="rightMenu" class="right-menu">
+    <div class="right-menu__icon">
+        <button class="right-back">
+            <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+        </button>
+        <button class="right-close">
+            <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
     </div>
     <div class="right-menu__title">
-        <h2 class="change">
-            위시리스트 수정
-        </h2>
-        <ul class="header-box">
-            <li class="header-item">
-                <header class="right-menu__header">
-                    <div class="right-list__box">
-                        <div class="listName-wrap">
-                            <div class="listName-box">
-                                <a href="#" class="listName">위시리스트</a>
-                                <div class="selectedList">선택된 목록</div>
-                            </div>
-                        </div>
-                        <div class="list-count">0 개의 제품</div>
-                    </div>
-                    <div>
-                        <button class="edit-btn">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </header>
-                <div class="right-content__box">
-                    <div class="right-content">
-                    </div>
-                </div>
-            </li>
-        </ul>
+        <h3>위시리스트 수정</h3>
     </div>
+    <div class="right-menu__top">
+        <div class="right-menu__item">
+            <div>
+                <div class="right-menu__list">
+                    <a>위시리스트</a>
+                </div>
+                <div class="right-menu__selected">
+                    <span>선택된 목록</span>
+                </div>
+            </div>
+            <div>
+                <p class="right-menu__count">0 개의 제품</p>
+            </div>
+        </div>
+        <div class="right-menu__copy">
+            <button class="list-copy">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="list-content"></div>
 </div>
 <div id="wishlist-screen">
     <div class="status-bar">
@@ -105,7 +138,7 @@
     </div>
     <div class="top-menu">
         <div class="top-menu__element top-start">
-            <button id="menu-btn" type="button" title="메뉴" aria-label="메뉴">
+            <button id="menu-btn" type="button" title="메뉴" aria-label="메뉴" onclick="leftOpen()">
             <span>
                 <svg class="w-6 h-6 top-menu__icon menu-btn__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
@@ -171,7 +204,7 @@
     </div>
     <div class="list-wrap">
         <header>
-            <h1>위시리스트</h1>
+            <h1 style="font-weight: bold">위시리스트</h1>
         </header>
         <div class="list-box">
             <div class="list-item">
@@ -182,7 +215,7 @@
                     </div>
                     <div class="count-list">0 개의 제품</div>
                     <div id="list-wrap__btn">
-                        <button style="outline: none" type="button" class="list-btn" id="list-btn" onclick="right_open()">
+                        <button style="outline: none" type="button" class="list-btn" id="list-btn">
                         <span>
                             <svg class="w-6 h-6 list-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -272,28 +305,20 @@
     </footer>
 </div>
 
-
 <script>
-    function right_open() {
-        var right_menu = document.getElementById('right-menu');
-        var screen_color = document.getElementById('wishlist-screen')
-        right_menu.style.visibility = 'visible';
+    function leftClose() {
+        var screen_opacity = document.getElementById('wishlist-screen');
 
-        $('#right-menu').show();
-        screen_color.style.filter = 'opacity(0.7)'
+        screen_opacity.style.filter = 'opacity(1)';
+        document.getElementById("leftMenu").style.width = "0";
     }
 
-    function right_close() {
-        var screen_color = document.getElementById('wishlist-screen')
+    function leftOpen() {
+        var screen_opacity = document.getElementById('wishlist-screen');
 
-        $('#right-menu').hide();
-        screen_color.style.filter = 'opacity(1)'
+        screen_opacity.style.filter = 'opacity(0.6)'
+        document.getElementById("leftMenu").style.width = "460px";
     }
-
-    $(document).ready(function () {
-        $('#right-menu').hide();
-    });
-
 
 </script>
 </body>
