@@ -27,7 +27,15 @@
 </head>
 
 <body>
-<a href="/index">
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+            alert("{{messages[-1]}}")
+        </script>
+    {% endif %}
+{% endwith %}
+
+<a href="/">
     <svg class="back" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
     </svg>
@@ -45,39 +53,72 @@
         </div>
     </div>
     <div class="left-foot">
-        <p>IKEA.kr - <a href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/" class="policy" target="_blank"> 개인정보처리방침</a><br>
+        <p>IKEA.kr - <a href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/" class="policy"
+                        target="_blank"> 개인정보처리방침</a><br>
             © Inter IKEA Systems B.V. 1999-2021</p>
     </div>
 </div>
 <div class="right">
-    <div class="loginform">
+    <form method="post" action="/login" class="loginform">
         <div>
-            <label for="id">이메일 또는 휴대폰 번호</label>
-            <input type="email number" id="id">
-            <p class="option">다른 로그인 옵션 : <span class="plus">일회용 코드로 로그인</span></p></div>
+            <div class="inputbox">
+                <input type="text" autocomplete="none" onclick="email()" id="email" name="email">
+                <span class="small">이메일 또는 휴대폰 번호</span>
+                <p class="filed" id="chkid">이메일 또는 휴대폰 번호를 입력해주세요.</p>
+            </div>
+            <p class="option">다른 로그인 옵션 : <span class="plus">일회용 코드로 로그인</span></p>
+        </div>
         <div>
-            <label for="pw">비밀번호</label>
-            <input type="password" id="pw">
-            <svg class="showpw" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                 xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-            </svg>
-            <svg class="dontshowpw" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                 xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
-            </svg>
+            <div class="inputbox">
+                <input type="password" autocomplete="none" onclick="pw()" id="pw" name="pw">
+                <span class="small">비밀번호</span>
+                <button class="pw_svg">
+                    <svg class="showpw" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg" onclick="showpw()">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                    <svg class="dontshowpw pw_svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg" onclick="dontshowpw()">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
+                    </svg>
+                </button>
+                <p class="filed" id="chkpw">비밀번호를 입력해 주세요.</p>
+            </div>
             <p class="option plus">비밀번호 찾기</p>
         </div>
         <div>
-            <button class="login_btn"><span class="font">로그인</span></button>
-            <button class="letin_btn"><span class="font">회원가입</span></button>
+            <button type="submit" class="login_btn"><span class="font">로그인</span></button>
+            <a href="/register"><button class="letin_btn"><span class="font">회원가입</span></button></a>
         </div>
-    </div>
+    </form>
 </div>
+<script>
+    // 필드값 각각 필수 입력
+    function email() {
+        let info = $('#email').val()
+        if (info == '') {
+            $('#chkid').show()
+        }
+    }
+
+    function pw() {
+        let info = $('#pw').val()
+        if (info == '') {
+            $('#chkpw').show()
+        }
+    }
+
+    $(function () {
+        $(document).mousedown(function (e) {
+            $('p[class=filed]').hide()
+        });
+    })
+
+</script>
 </body>
 
 </html>
