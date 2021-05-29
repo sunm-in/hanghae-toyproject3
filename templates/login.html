@@ -27,13 +27,13 @@
 </head>
 
 <body>
-{%with messages = get_flashed_messages()%}
-  {%if messages %}
-    <script type="text/javascript">
-      alert("{{messages[-1]}}");
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <script>
+        alert("{{messages[-1]}}")
     </script>
-    {%endif%}
-  {%endwith%}
+    {% endif %}
+    {% endwith %}
 
 <a href="/">
     <svg class="back" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +92,7 @@
         </div>
         <div>
             <button type="submit" class="login_btn"><span class="font">로그인</span></button>
-            <button class="letin_btn" onclick="location.href='/register'"><span class="font">회원가입</span></button>
+            <button class="letin_btn" onclick="location.href='/register'" type="button"><span class="font">회원가입</span></button>
         </div>
     </form>
 </div>

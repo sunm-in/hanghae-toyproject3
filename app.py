@@ -36,7 +36,7 @@ def login():
                 return redirect('/')
             else:
                 flash('비밀번호가 일치하지 않습니다.')
-        return redirect('login')
+        return redirect('/login')
 
 
 # 로그아웃
