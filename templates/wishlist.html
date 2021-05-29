@@ -127,7 +127,7 @@
                 </button>
             </div>
             <div>
-                <button class="close-btn" onclick="closeCopy">
+                <button class="close-btn" onclick="closeCopy()">
                     <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
                          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -261,7 +261,7 @@
                 </header>
                 <div class="item-content"></div>
             </div>
-            <button id="creat-list" type="button">
+            <button id="creat-list" type="button" onclick="newList()">
             <span>
                 <svg class="w-6 h-6 creat-btn_icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
@@ -271,6 +271,26 @@
             </span>
                 <span>위시리스트 만들기</span>
             </button>
+            <form id="new-list__form" style="display: none">
+                <div class="new-list__wrap">
+                    <div class="new-list__input">
+                        <input type="text" id="new-list">
+                        <label for="new-list"></label>
+                    </div>
+                    <div class="new-list__btn">
+                        <button type="submit" class="check-btn newList">
+                            <svg width="18px" height="18px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </button>
+                        <button type="reset" class="cancel-btn newList" onclick="listClose()">
+                            <svg width="18px" height="18px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <footer>
@@ -379,9 +399,24 @@
         }
     }
 
-    // function closeCopy() {
-    //     $('#right-menu__top').show();
-    // }
+    function closeCopy() {
+        $('#change-wrap').hide();
+        $('#right-menu__top').show();
+    }
+
+    function newList() {
+        if ($('#new-list__form').css('display') == 'none') {
+            $('#creat-list').hide();
+            $('#new-list__form').show();
+        } else {
+            $('#new-list__form').hide();
+        }
+    }
+
+    function listClose() {
+        $('#new-list__form').hide();
+        $('#creat-list').show();
+    }
 
 </script>
 </body>
