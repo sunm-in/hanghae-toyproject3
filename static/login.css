@@ -71,37 +71,85 @@ h1 {
     justify-content: center;
 }
 
+.inputbox {
+    position: relative;
+    width: 448px;
+    height: 50px;
+}
+
+.inputbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    outline: none;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.small {
+    position: absolute;
+    font-size: 15px;
+    top: 1px;
+    left: 1px;
+    display: inline-block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputbox input:focus ~ span,
+.inputbox input:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 13px;
+}
+
+.filed {
+    color: red;
+    font-size: 11px;
+    display: none;
+    padding-top: 30px;
+    margin-bottom: 0px;
+}
+/*인풋박스 애니메이션 및 공란일 때 아래 문구 완료*/
+
 .loginform {
     width: 448px;
-    height: 374px;
+    height: 400px;
     padding: 16px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-input {
+.pw {
+    margin: 60px 0px;
+}
+
+.pw_svg {
+    width: 24px;
+    height: 24px;
+    padding-bottom: 25px;
+    position: relative;
+    float: right;
+    background: transparent;
     border: none;
-    border-bottom: #929292 1px solid;
-    width: 448px;
+    cursor: pointer;
 }
 
-input:focus {
+.pw_svg:focus {
     outline: none;
-}
-
-label {
-    position: absolute;
-    font-size: 1rem;
 }
 
 .dontshowpw {
     display: none;
 }
 
+/*다른 로그인 옵션*/
 .option {
     font-size: 14px;
-    margin-top: 10px;
 }
 
 .plus {
@@ -114,6 +162,10 @@ button {
     height: 3.5rem;
     margin: auto;
     display: block;
+}
+
+button:focus {
+    outline: none;
 }
 
 .login_btn {

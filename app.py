@@ -13,16 +13,40 @@ def home():
     return render_template('index.html')
 
 
-# 로그인
-@app.route('/login')
-def login():
-    return render_template('login.html')
-
-
-# 회원가입
 app.config["SECRET_KEY"] = "team2"
 
 
+# 로그인
+@app.route('/login', methods=["GET", "POST"])
+def login():
+    if request.method == "GET":
+        return render_template('login.html')
+    else:
+        email = request.form.get('email')
+        pw = request.form.get('pw')
+
+        data = db.ikea.find_one({'email': email})
+        if data is None:
+            flash('회원 정보가 없습니다.')
+            return redirect('login')
+        else:
+            if data.get('pw') == pw:
+                session['user'] = email
+                session.permanent = True
+                return redirect('/')
+            else:
+                flash('비밀번호가 일치하지 않습니다.')
+        return redirect('login')
+
+
+# 로그아웃
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
+
+
+# 회원가입
 @app.route('/register', methods=["GET", "POST"])
 def register():
     if request.method == "GET":
