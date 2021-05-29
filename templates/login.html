@@ -62,17 +62,16 @@
     <form method="post" action="/login" class="loginform">
         <div>
             <div class="inputbox">
-                <input type="text" autocomplete="none" onclick="email()" id="email" name="email">
-                <span class="small">이메일 또는 휴대폰 번호</span>
-                <p class="filed" id="chkid">이메일 또는 휴대폰 번호를 입력해주세요.</p>
+                <input type="text" autocomplete="none" onclick="inputid()" id="email" name="email">
+                <span class="small">이메일</span>
+                <p class="filed" id="chkid">이메일을 입력해주세요.</p>
             </div>
-            <p class="option">다른 로그인 옵션 : <span class="plus">일회용 코드로 로그인</span></p>
         </div>
         <div>
             <div class="inputbox">
-                <input type="password" autocomplete="none" onclick="pw()" id="pw" name="pw">
+                <input type="password" autocomplete="none" onclick="inputpw()" id="pw" name="pw">
                 <span class="small">비밀번호</span>
-                <button class="pw_svg">
+                <button class="pw_svg" type="button">
                     <svg class="showpw" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg" onclick="showpw()">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -98,14 +97,14 @@
 </div>
 <script>
     // 필드값 각각 필수 입력
-    function email() {
+    function inputid() {
         let info = $('#email').val()
         if (info == '') {
             $('#chkid').show()
         }
     }
 
-    function pw() {
+    function inputpw() {
         let info = $('#pw').val()
         if (info == '') {
             $('#chkpw').show()
@@ -117,6 +116,23 @@
             $('p[class=filed]').hide()
         });
     })
+
+    //비밀번호 보이고 숨기기
+    function showpw() {
+        if ($('.dontshowpw').css('display') == 'none') {
+            $('.dontshowpw').show()
+            $('.showpw').hide()
+            $('#pw').attr('type', 'text')
+        }
+    }
+
+    function dontshowpw() {
+        if ($('.showpw').css('display') == 'none') {
+            $('.showpw').show()
+            $('.dontshowpw').hide()
+            $('#pw').attr('type', 'password')
+        }
+    }
 
 </script>
 </body>
