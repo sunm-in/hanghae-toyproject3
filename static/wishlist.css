@@ -485,8 +485,41 @@ h3 {
 .change-icon button:hover {
     background-color: whitesmoke;
 }
-
-
+/* 위시리스트 만들기 input */
+.new-list__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6vh;
+    align-items: center;
+}
+.new-list__input input {
+    width: 145vh;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-bottom: black solid 1px;
+}
+.new-list__input input:focus {
+    border-bottom: #1e3799 solid 2px;
+}
+.new-list__btn {
+    display: flex;
+    width: 100px;
+    margin-right: 1vh;
+    justify-content: space-between;
+}
+.newList {
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    background-color: transparent;
+}
+.newList:hover {
+    background-color: whitesmoke;
+    outline: none;
+}
 
 /*----- -----   -----   -----   -----*/
 @media screen and (max-width: 1200px) {
