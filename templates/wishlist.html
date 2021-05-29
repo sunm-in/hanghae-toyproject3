@@ -258,8 +258,10 @@
                         </span>
                         </button>
                     </div>
+                    <div class="item-content" id="item-content">
+                    </div>
                 </header>
-                <div class="item-content"></div>
+
             </div>
             <button id="creat-list" type="button" onclick="newList()">
             <span>
@@ -278,14 +280,18 @@
                         <label for="new-list"></label>
                     </div>
                     <div class="new-list__btn">
-                        <button type="submit" class="check-btn newList">
-                            <svg width="18px" height="18px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        <button type="submit" class="check-btn newList" onclick="makeList()">
+                            <svg width="18px" height="18px" class="w-6 h-6" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M5 13l4 4L19 7"></path>
                             </svg>
                         </button>
                         <button type="reset" class="cancel-btn newList" onclick="listClose()">
-                            <svg width="18px" height="18px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            <svg width="18px" height="18px" class="w-6 h-6" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
                     </div>
@@ -416,6 +422,10 @@
     function listClose() {
         $('#new-list__form').hide();
         $('#creat-list').show();
+    }
+
+    function makeList() {
+
     }
 
 </script>
