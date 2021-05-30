@@ -40,8 +40,8 @@
     </div>
     <div class="left-menu__link">
         <div class="left-menu__top">
-            <p>모든 제품</p>
-            <p>디지털 쇼룸</p>
+            <p><a style="color: black" href="#" onclick="allProduct_open()">모든 제품</a></p>
+            <p><a style="color: black" href="#">디지털 쇼룸</a></p>
         </div>
         <div class="left-menu__middle">
             <p>할인 중</p>
@@ -68,6 +68,58 @@
     </div>
 </div>
 <!--  왼쪽 메뉴 끝  -->
+<!--  모든제품 클릭 시 메뉴  -->
+<div class="all-product__menu" id="all-product__menu">
+    <div class="product-menu__icon">
+        <button class="left-close">
+            <svg width="24px" height="24px" onclick="allProduct_close()" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <img style="margin-right: 4vh" width="90vh"
+             src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg">
+    </div>
+    <div class="product-menu__header">
+        <button class="product-menu-btn__back" type="button" onclick="allProduct_back()">
+            <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+        </button>
+        <div style="margin-left: 5vh;" class="title-box">
+            <p><a class="header-title all">모든 제품</a></p>
+            <p><a class="header-title sustainable" href="#">지속가능한 제품</a></p>
+        </div>
+    </div>
+    <div class="product-menu__link">
+        <p><a>홈스마트</a></p>
+        <p><a>가구</a></p>
+        <p><a>침대/매트리스</a></p>
+        <p><a>주방가구</a></p>
+        <p><a>어린이 IKEA</a></p>
+        <p><a>수납정리</a></p>
+        <p><a>텍스타일</a></p>
+        <p><a>홈데코/장식품</a></p>
+        <p><a>욕실</a></p>
+        <p><a>야외용 제품</a></p>
+        <p><a>조명</a></p>
+        <p><a>러그/매트/데크</a></p>
+        <details class="product-menu__more">
+            <summary>더보기</summary>
+                <p><a>화분/식물</a></p>
+                <p><a>주방용품</a></p>
+                <p><a>여름용 소품</a></p>
+                <p><a>가전제품</a></p>
+                <p><a>세탁/청소</a></p>
+                <p><a>셀프 인테리어</a></p>
+                <p><a>반려동물</a></p>
+                <p><a>IKEA 푸드</a></p>
+        </details>
+    </div>
+</div>
+<!--  모든제품 클릭 시 메뉴 끝 -->
 <!--  오른쪽 메뉴  -->
 <div id="rightMenu" class="right-menu">
     <div class="right-menu__icon">
@@ -180,7 +232,7 @@
             <div class="top-menu__start">
                 <a href="#"><img width="90vh"
                                  src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
-                <a href="#">모든 제품</a>
+                <a href="#" onclick="allProduct_open()">모든 제품</a>
                 <a href="#">디지털 쇼룸</a>
             </div>
 
@@ -246,8 +298,7 @@
                     </div>
                     <div class="count-list">0 개의 제품</div>
                     <div id="list-wrap__btn">
-                        <button style="outline: none" type="button" class="list-btn" id="list-btn"
-                                onclick="rightOpen()">
+                        <button style="outline: none" type="button" class="list-btn" onclick="rightOpen()">
                         <span>
                             <svg class="w-6 h-6 list-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -258,10 +309,34 @@
                         </span>
                         </button>
                     </div>
-                    <div class="item-content" id="item-content">
+                    <div class="item-content">
                     </div>
                 </header>
-
+            </div>
+            <!--     리스트 추가      -->
+            <div class="list-item">
+                <header class="list-header">
+                    <div class="list-first">
+                        <a href="#" class="list-header__title">위시리스트</a>
+                    </div>
+                    <div class="count-list">0 개의 제품</div>
+                    <div class="list-wrap__btn">
+                        <button style="outline: none" type="button" class="list-btn" onclick="rightOpen()">
+                        <span>
+                            <svg class="w-6 h-6 list-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z">
+                                </path>
+                            </svg>
+                        </span>
+                        </button>
+                    </div>
+                    <div class="item-content">
+                        <img class="item-img"
+                             src="https://www.ikea.com/kr/ko/images/products/dvala-pillowcase-beige__0635972_pe702888_s3.jpg">
+                    </div>
+                </header>
             </div>
             <button id="creat-list" type="button" onclick="newList()">
             <span>
@@ -375,7 +450,26 @@
         var screen_opacity = document.getElementById('wishlist-screen');
 
         screen_opacity.style.filter = 'opacity(0.6)';
-        document.getElementById("leftMenu").style.width = "460px";
+        document.getElementById("leftMenu").style.width = "480px";
+    }
+
+    function allProduct_open() {
+        document.getElementById('all-product__menu').style.width = '480px';
+    }
+
+    function allProduct_close() {
+        var screen_opacity = document.getElementById('wishlist-screen');
+
+        screen_opacity.style.filter = 'opacity(1)';
+
+        document.getElementById('all-product__menu').style.width = '0';
+        document.getElementById('leftMenu').style.width = '0';
+
+    }
+
+    function allProduct_back() {
+        document.getElementById('all-product__menu').style.width = '0';
+        document.getElementById('leftMenu').style.width = '480px';
     }
 
     function rightClose() {
