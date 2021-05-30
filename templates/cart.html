@@ -49,17 +49,23 @@
         <a href="#">IKEA 베스트셀러</a>
     </div>
 </div> <!--최상단메뉴-->
-<input type="checkbox" id="menuicon"> <!--네비게이션 바-->
-<label for="menuicon" style="position: fixed;">
-    <span></span>
-    <span></span>
-    <span></span>
-</label> <!--네비게이션 바-->
-<div class="sidebar">
+<div class="top-menu__element top-start">
+            <button id="menu-btn" type="button" title="메뉴" aria-label="메뉴" onclick="mainOpen();">
+            <span>
+                <svg class="w-6 h-6 top-menu__icon menu-btn__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+            </span>
+            </button>
+        </div>
+<div class="sidebar" id="main_nav">
     <div id="nav"> <!--navbar-->
+        <a href="#" class="product_close" onclick="mainClose();"
+        style="margin-right: 380px; margin-top: 30px; color: black;">x</a>
         <a href="#"><img width="90vh" style="margin-top: 30px; margin-bottom: 50px; margin-left: 160px;"
                          src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
-        <p class="nav-text" style="color: black; font-size: 35px;"><a href="#">모든 제품</a></p>
+        <p class="nav-text" style="color: black; font-size: 35px;" onclick="openProduct();"><a href="#">모든 제품</a></p>
         <p class="nav-text" style="color: black; font-size: 35px;"><a href="#">디지털 쇼룸</a></p>
         <p class="nav-text"><a>할인중</a></p>
         <p class="nav-text"><a>신제품</a></p>
@@ -78,8 +84,10 @@
 <div class="product_sidebar" id="product_sidenav">
     <a href="#" class="product_close" onclick="closeProduct();"
        style="margin-right: 380px; margin-top: 30px;">x</a>
-    <a href="#"><img width="90vh" style="margin-top: 30px; margin-bottom: 50px; margin-left: 160px;"
+    <a href="#" class="product_back" id="product_back" onclick="productBack();">←</a>
+    <a href="#"><img width="90vh" style="margin-top: -180px; margin-bottom: 100px; margin-left: 160px;"
                      src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
+    <div class="link">
     <h1 class="nav-main">모든 제품</h1>
     <p class="nav-text" style="color: black; font-size: 15px; padding: 30px 0px 30px 0px;"><a href="#">지속 가능한 제품</a></p>
     <p class="digital-text"><a>홈스마트</a></p>
@@ -105,7 +113,7 @@
                 <p class="more-text"><a>반려동물</a></p>
                 <p class="more-text"><a>IKEA 푸드</a></p>
     </details>
-
+    </div>
 </div> <!-- 모든 제품 사이드 바-->
 <div class="digital_sidebar" id="digital_sidenav">
     <a href="#" class="digital_close" onclick="digitalClose();"
@@ -351,6 +359,17 @@
 
     function digitalClose() {
         document.getElementById('digital_sidenav').style.width = '0';
+    }
+    function productBack() {
+        document.getElementById('product_sidenav').style.width = '0';
+        document.getElementById('main_nav').style.marginLeft= '500px';
+    }
+
+    function mainOpen() {
+        document.getElementById("main_nav").style.marginLeft = "500px";
+    }
+    function mainClose() {
+        document.getElementById("main_nav").style.marginLeft = '0px';
     }
 </script>
 </html>
