@@ -28,6 +28,10 @@ body {
     margin-top: 0px;
 }
 
+.svg_menu {
+    display: none;
+}
+
 /*---------------------------------*/
 #letin {
     padding: 130px auto;
@@ -38,8 +42,12 @@ body {
     margin-left: 60px;
 }
 
-#phone {
-    width: 500px;
+.inputbox {
+    width: 600px;
+}
+
+#personald {
+    width: 600px;
 }
 
 .phone small {
