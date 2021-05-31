@@ -71,7 +71,7 @@
 <!--  모든제품 클릭 시 메뉴  -->
 <div class="all-product__menu" id="all-product__menu">
     <div class="product-menu__icon">
-        <button class="left-close">
+        <button style="outline: none" class="left-close">
             <svg width="24px" height="24px" onclick="allProduct_close()" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                  xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -107,7 +107,7 @@
         <p><a>조명</a></p>
         <p><a>러그/매트/데크</a></p>
         <details class="product-menu__more">
-            <summary>더보기</summary>
+            <summary onclick="more()">더보기</summary>
                 <p><a>화분/식물</a></p>
                 <p><a>주방용품</a></p>
                 <p><a>여름용 소품</a></p>
@@ -439,32 +439,24 @@
 </div>
 
 <script>
-    function leftClose() {
-        var screen_opacity = document.getElementById('wishlist-screen');
-
-        screen_opacity.style.filter = 'opacity(1)';
-        document.getElementById("leftMenu").style.width = "0";
-    }
+    $(document).ready(function () {
+        $("#change-wrap").css('display', 'none');
+        // $('#leftMenu').css('display', 'none');
+    });
 
     function leftOpen() {
-        var screen_opacity = document.getElementById('wishlist-screen');
-
-        screen_opacity.style.filter = 'opacity(0.6)';
         document.getElementById("leftMenu").style.width = "480px";
+        document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93,93,93,0.5)';
+    }
+
+    function leftClose() {
+        document.getElementById("leftMenu").style.width = "0";
+        document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0)';
     }
 
     function allProduct_open() {
         document.getElementById('all-product__menu').style.width = '480px';
-    }
-
-    function allProduct_close() {
-        var screen_opacity = document.getElementById('wishlist-screen');
-
-        screen_opacity.style.filter = 'opacity(1)';
-
-        document.getElementById('all-product__menu').style.width = '0';
-        document.getElementById('leftMenu').style.width = '0';
-
+        document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0.5)';
     }
 
     function allProduct_back() {
@@ -472,23 +464,25 @@
         document.getElementById('leftMenu').style.width = '480px';
     }
 
-    function rightClose() {
-        var screen_opacity = document.getElementById('wishlist-screen');
+    function more() {
+        $('summary').hide();
+    }
 
-        screen_opacity.style.filter = 'opacity(1)';
-        document.getElementById('rightMenu').style.width = "0";
+    function allProduct_close() {
+        document.getElementById('all-product__menu').style.width = '0';
+        document.getElementById('leftMenu').style.width = '0';
+        document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0)';
     }
 
     function rightOpen() {
-        var screen_opacity = document.getElementById('wishlist-screen');
-
-        screen_opacity.style.filter = 'opacity(0.6)';
         document.getElementById('rightMenu').style.width = "470px";
+        document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0.5)';
     }
 
-    $(document).ready(function () {
-        $("#change-wrap").css('display', 'none')
-    });
+    function rightClose() {
+        document.getElementById('rightMenu').style.width = "0";
+        document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0)';
+    }
 
     function listCopy() {
         if ($('#change-wrap').css('display') == 'none') {
