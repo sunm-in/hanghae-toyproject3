@@ -26,7 +26,6 @@
 </head>
 
 <body>
-<!--  왼쪽 메뉴  -->
 <div id="leftMenu" class="left-menu">
     <div class="left-menu__icon">
         <button style="outline: none" class="left-close" onclick="leftClose()">
@@ -41,7 +40,7 @@
     <div class="left-menu__link">
         <div class="left-menu__top">
             <p><a style="color: black" href="#" onclick="allProduct_open()">모든 제품</a></p>
-            <p><a style="color: black" href="#">디지털 쇼룸</a></p>
+            <p><a style="color: black" href="#" onclick="digital_open()">디지털 쇼룸</a></p>
         </div>
         <div class="left-menu__middle">
             <p>할인 중</p>
@@ -66,9 +65,7 @@
             <a class="country">국가 변경</a>
         </div>
     </div>
-</div>
-<!--  왼쪽 메뉴 끝  -->
-<!--  모든제품 클릭 시 메뉴  -->
+</div>  <!--  왼쪽 메뉴  -->
 <div class="all-product__menu" id="all-product__menu">
     <div class="product-menu__icon">
         <button style="outline: none" class="left-close">
@@ -119,9 +116,80 @@
             <p><a>IKEA 푸드</a></p>
         </details>
     </div>
-</div>
-<!--  모든제품 클릭 시 메뉴 끝 -->
-<!--  오른쪽 메뉴  -->
+</div>  <!--  모든제품 클릭 시 메뉴  -->
+<div class="digital-showroom__menu" id="digital-showroom__menu">
+    <div class="digital-menu__icon">
+        <div class="close-logo">
+            <button style="outline: none" class="digital-btn__close" onclick="digital_close()">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <img style="margin-right: 4vh" width="90vh"
+             src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg">
+        </div>
+        <div class="back-title">
+            <button style="outline: none;" class="digital-menu__back" type="button" onclick="digital_back()">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            </button>
+            <div class="digital-title__box">
+                <p class="digital-title">디지털 쇼룸</p>
+            </div>
+        </div>
+    </div>
+    <div class="digital-menu__img">
+        <nav class="digital-nav">
+            <ul class="digital-ul">
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-6d99ac7918532ea3ab45a453808ac48c.jpg?f=xxxs">
+                    <p class="digital-img__title">침실</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-8f7bb73bdec16ab7e15d23c7489b3f50.jpg?f=xxxs">
+                    <p class="digital-img__title">거실</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/veddinge-588d723470398c845beb548d470f9588.jpg?f=xxxs">
+                    <p class="digital-img__title">주방</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-49330ab0ef3fb4a738833ae8bb3a54fe.jpg?f=xxxs">
+                    <p class="digital-img__title">다이닝</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-52804471b6a1a422bf91cb61aedcd5ae.jpg?f=xxxs">
+                    <p class="digital-img__title">어린이 IKEA</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/fejka-enhet-tvaellen-vilto-950d38d400a0abde85430ef15b012cb7.jpg?f=xxxs">
+                    <p class="digital-img__title">욕실</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-41b2e130db4a9cc3e1cc0918d84fc919.jpg?f=xxxs">
+                    <p class="digital-img__title">홈오피스</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/rejsa-omar-39cb7fe33551dc4c8155c62995659b19.jpg?f=xxxs">
+                    <p class="digital-img__title">현관</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-cd0e586212284717fa9104a5bf9ae196.jpg?f=xxxs">
+                    <p class="digital-img__title">아웃도어</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-1daeba779a9970f285d9a3da54127606.jpg?f=xxxs">
+                    <p class="digital-img__title">IKEA for Business</p>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>  <!--  디지털 쇼룸  -->
 <div id="rightMenu" class="right-menu">
     <div class="right-menu__icon">
         <button class="right-back" style="outline: none" onclick="rightClose()">
@@ -191,8 +259,7 @@
         </div>
     </div>
     <div id="list-content"></div>
-</div>
-<!--  오른쪽 메뉴 끝  -->
+</div>  <!--  오른쪽 메뉴  -->
 <div id="wishlist-screen">
     <div class="status-bar">
         <div class="status-bar__element">
@@ -234,7 +301,7 @@
                 <a href="/"><img width="90vh"
                                  src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
                 <a class="top-menu__link" href="#" onclick="allProduct_open()">모든 제품</a>
-                <a class="top-menu__link" href="#">디지털 쇼룸</a>
+                <a class="top-menu__link" href="#" onclick="digital_open()">디지털 쇼룸</a>
             </div>
 
         </div>
@@ -445,14 +512,14 @@
             </div>
         </div>
     </footer>
-</div>
+</div>  <!--  위시리스트 페이지  -->
 
 <script>
     $(document).ready(function () {
         $("#change-wrap").css('display', 'none');
-        // $('#leftMenu').css('display', 'none');
     });
 
+    // 왼쪽 메뉴
     function leftOpen() {
         document.getElementById("leftMenu").style.width = "35%";
         document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93,93,93,0.5)';
@@ -463,6 +530,7 @@
         document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0)';
     }
 
+    // 모든제품
     function allProduct_open() {
         document.getElementById('all-product__menu').style.width = '35%';
         document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0.5)';
@@ -483,6 +551,24 @@
         document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0)';
     }
 
+    // 디지털 쇼룸
+    function digital_open() {
+        document.getElementById('digital-showroom__menu').style.width = '35%';
+        document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0.5)';
+    }
+
+    function digital_back() {
+        document.getElementById('digital-showroom__menu').style.width = '0';
+        document.getElementById('leftMenu').style.width = '35%';
+    }
+
+    function digital_close() {
+        document.getElementById('digital-showroom__menu').style.width = '0';
+        document.getElementById('leftMenu').style.width = '0';
+        document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0)';
+    }
+
+    // 위시리스트 수정 메뉴
     function rightOpen() {
         document.getElementById('rightMenu').style.width = "35%";
         document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0.5)';
@@ -502,7 +588,7 @@
         }
     }
 
-
+    // 위시리스트 수정 버튼
     function listCopy() {
         if ($('#change-wrap').css('display') == 'none') {
             $('#right-menu__top').hide();
@@ -517,6 +603,7 @@
         $('#right-menu__top').show();
     }
 
+    // 위시리스트 만들기 버튼
     function newList() {
         if ($('#new-list__form').css('display') == 'none') {
             $('#creat-list').hide();
