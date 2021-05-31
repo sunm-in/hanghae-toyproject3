@@ -72,7 +72,8 @@
 <div class="all-product__menu" id="all-product__menu">
     <div class="product-menu__icon">
         <button style="outline: none" class="left-close">
-            <svg width="24px" height="24px" onclick="allProduct_close()" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            <svg width="24px" height="24px" onclick="allProduct_close()" class="w-6 h-6" fill="none"
+                 stroke="currentColor" viewBox="0 0 24 24"
                  xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
@@ -108,14 +109,14 @@
         <p><a>러그/매트/데크</a></p>
         <details class="product-menu__more">
             <summary onclick="more()">더보기</summary>
-                <p><a>화분/식물</a></p>
-                <p><a>주방용품</a></p>
-                <p><a>여름용 소품</a></p>
-                <p><a>가전제품</a></p>
-                <p><a>세탁/청소</a></p>
-                <p><a>셀프 인테리어</a></p>
-                <p><a>반려동물</a></p>
-                <p><a>IKEA 푸드</a></p>
+            <p><a>화분/식물</a></p>
+            <p><a>주방용품</a></p>
+            <p><a>여름용 소품</a></p>
+            <p><a>가전제품</a></p>
+            <p><a>세탁/청소</a></p>
+            <p><a>셀프 인테리어</a></p>
+            <p><a>반려동물</a></p>
+            <p><a>IKEA 푸드</a></p>
         </details>
     </div>
 </div>
@@ -221,7 +222,7 @@
     </div>
     <div class="top-menu">
         <div class="top-menu__element top-start">
-            <button id="menu-btn" type="button" title="메뉴" aria-label="메뉴" onclick="leftOpen()">
+            <button id="menu-btn" class="svg_menu" type="button" title="메뉴" aria-label="메뉴" onclick="leftOpen()">
             <span>
                 <svg class="w-6 h-6 top-menu__icon menu-btn__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
@@ -230,10 +231,10 @@
             </span>
             </button>
             <div class="top-menu__start">
-                <a href="#"><img width="90vh"
+                <a href="/"><img width="90vh"
                                  src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
-                <a href="#" onclick="allProduct_open()">모든 제품</a>
-                <a href="#">디지털 쇼룸</a>
+                <a class="top-menu__link" href="#" onclick="allProduct_open()">모든 제품</a>
+                <a class="top-menu__link" href="#">디지털 쇼룸</a>
             </div>
 
         </div>
@@ -243,7 +244,8 @@
              xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-        </svg></span>
+        </svg>
+        </span>
             <input type="search" placeholder="검색어 입력" class="top-middle">
             <span><svg class="camera" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                        xmlns="http://www.w3.org/2000/svg">
@@ -255,32 +257,39 @@
         </div>
         <div class="top-menu__element top-end">
             <a href="#" title="배송조회 " aria-label="배송조회">
-                <svg class="w-6 h-6 top-menu__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-6 h-6 top-menu__icon delivery" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
                 </svg>
             </a>
-            <a href="#" title="내 프로필" aria-label="내 프로필">
+            <a href="/login" title="내 프로필" aria-label="내 프로필">
                 <svg class="w-6 h-6 top-menu__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                 </svg>
             </a>
-            <a href="#" title="위시리스트" aria-label="위시리스트">
+            <a href="/favorite" title="위시리스트" aria-label="위시리스트">
                 <svg class="w-6 h-6 top-menu__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                 </svg>
             </a>
-            <a href="#" title="장바구니" aria-label="장바구니">
+            <a href="/cart" title="장바구니" aria-label="장바구니">
                 <svg class="w-6 h-6 top-menu__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+            </a>
+            <a href="#" onclick="minimenu()">
+                <svg class="w-6 h-6 minimenu" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </a>
         </div>
@@ -483,6 +492,16 @@
         document.getElementById('rightMenu').style.width = "0";
         document.getElementById('leftMenu').style.boxShadow = '0 0 0 9999px rgba(93, 93, 93, 0)';
     }
+
+    //1200px 메뉴바
+    function minimenu() {
+        if ($('.svg_menu').css('display') == 'none') {
+            $('#leftMenu').show();
+        } else {
+            $('#leftMenu').hide();
+        }
+    }
+
 
     function listCopy() {
         if ($('#change-wrap').css('display') == 'none') {
