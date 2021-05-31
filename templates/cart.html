@@ -50,23 +50,23 @@
     </div>
 </div> <!--최상단메뉴-->
 <div class="top-menu__element top-start">
-            <button id="menu-btn" type="button" title="메뉴" aria-label="메뉴" onclick="mainOpen();">
+    <button id="menu-btn" type="button" title="메뉴" aria-label="메뉴" onclick="mainOpen();">
             <span>
                 <svg class="w-6 h-6 top-menu__icon menu-btn__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
             </span>
-            </button>
-        </div>
+    </button>
+</div>
 <div class="sidebar" id="main_nav">
     <div id="nav"> <!--navbar-->
         <a href="#" class="product_close" onclick="mainClose();"
-        style="margin-right: 380px; margin-top: 30px; color: black;">x</a>
+           style="margin-right: 380px; margin-top: 30px; color: black;">x</a>
         <a href="#"><img width="90vh" style="margin-top: 30px; margin-bottom: 50px; margin-left: 160px;"
                          src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
         <p class="nav-text" style="color: black; font-size: 35px;" onclick="openProduct();"><a href="#">모든 제품</a></p>
-        <p class="nav-text" style="color: black; font-size: 35px;"><a href="#">디지털 쇼룸</a></p>
+        <p class="nav-text" style="color: black; font-size: 35px;" onclick="digitalProduct();"><a href="#">디지털 쇼룸</a></p>
         <p class="nav-text"><a>할인중</a></p>
         <p class="nav-text"><a>신제품</a></p>
         <p class="nav-text"><a>더 낮은 새로운 가격</a></p>
@@ -88,52 +88,93 @@
     <a href="#"><img width="90vh" style="margin-top: -180px; margin-bottom: 100px; margin-left: 160px;"
                      src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
     <div class="link">
-    <h1 class="nav-main">모든 제품</h1>
-    <p class="nav-text" style="color: black; font-size: 15px; padding: 30px 0px 30px 0px;"><a href="#">지속 가능한 제품</a></p>
-    <p class="digital-text"><a>홈스마트</a></p>
-    <p class="digital-text"><a>가구</a></p>
-    <p class="digital-text"><a>침대/매트리스</a></p>
-    <p class="digital-text"><a>주방가구</a></p>
-    <p class="digital-text"><a>어린이 IKEA</a></p>
-    <p class="digital-text"><a>수납정리</a></p>
-    <p class="digital-text"><a>텍스타일</a></p>
-    <p class="digital-text"><a>홈데코/장식품</a></p>
-    <p class="digital-text"><a>욕실</a></p>
-    <p class="digital-text"><a>야외용 제품</a></p>
-    <p class="digital-text"><a>조명</a></p>
-    <p class="digital-text"><a>러그/매트/데크</a></p>
-    <details>
-        <summary class="more-text">더보기</summary>
-                <p class="more-text" style="margin-top: 20px;"><a>화분/식물</a></p>
-                <p class="more-text"><a>주방용품</a></p>
-                <p class="more-text"><a>여름용 소품</a></p>
-                <p class="more-text"><a>가전제품</a></p>
-                <p class="more-text"><a>세탁/청소</a></p>
-                <p class="more-text"><a>셀프 인테리어</a></p>
-                <p class="more-text"><a>반려동물</a></p>
-                <p class="more-text"><a>IKEA 푸드</a></p>
-    </details>
+        <h1 class="nav-main">모든 제품</h1>
+        <p class="nav-text" style="color: black; font-size: 15px; padding: 30px 0px 30px 0px;"><a href="#">지속 가능한 제품</a>
+        </p>
+        <p class="digital-text"><a>홈스마트</a></p>
+        <p class="digital-text"><a>가구</a></p>
+        <p class="digital-text"><a>침대/매트리스</a></p>
+        <p class="digital-text"><a>주방가구</a></p>
+        <p class="digital-text"><a>어린이 IKEA</a></p>
+        <p class="digital-text"><a>수납정리</a></p>
+        <p class="digital-text"><a>텍스타일</a></p>
+        <p class="digital-text"><a>홈데코/장식품</a></p>
+        <p class="digital-text"><a>욕실</a></p>
+        <p class="digital-text"><a>야외용 제품</a></p>
+        <p class="digital-text"><a>조명</a></p>
+        <p class="digital-text"><a>러그/매트/데크</a></p>
+        <details>
+            <summary class="more-text">더보기</summary>
+            <p class="more-text" style="margin-top: 20px;"><a>화분/식물</a></p>
+            <p class="more-text"><a>주방용품</a></p>
+            <p class="more-text"><a>여름용 소품</a></p>
+            <p class="more-text"><a>가전제품</a></p>
+            <p class="more-text"><a>세탁/청소</a></p>
+            <p class="more-text"><a>셀프 인테리어</a></p>
+            <p class="more-text"><a>반려동물</a></p>
+            <p class="more-text"><a>IKEA 푸드</a></p>
+        </details>
     </div>
 </div> <!-- 모든 제품 사이드 바-->
 <div class="digital_sidebar" id="digital_sidenav">
     <a href="#" class="digital_close" onclick="digitalClose();"
        style="margin-right: 380px; margin-top: 30px;">x</a>
-    <a href="#"><img width="90vh" style="margin-top: 30px; margin-bottom: 50px; margin-left: 160px;"
+    <a href="#" class="product_back" onclick="digitalBack();">←</a>
+    <a href="#"><img width="90vh" style="margin-top: -180px; margin-bottom: 100px; margin-left: 160px;"
                      src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
-    <p class="nav-text"><a href="#">모든 제품</a></p>
-    <p class="nav-text"><a href="#">디지털 쇼룸</a></p>
-    <p class="nav-text"><a>할인중</a></p>
-    <p class="nav-text"><a>신제품</a></p>
-    <p class="nav-text"><a>더 낮은 새로운 가격</a></p>
-    <p class="nav-text"><a>아이디어</a></p>
-    <p class="nav-text"><a>IKEA Live</a></p>
-    <p class="nav-text"><a>새로운 소식</a></p>
-    <br>
-    <p class="small-text"><a>매장안내</a></p>
-    <p class="small-text"><a>IKEA Family</a></p>
-    <p class="small-text"><a>고객지원</a></p>
-    <p class="small-text"><a>배송조회</a></p>
-    <p class="small-text"><a>내 프로필</a></p>
+    <h1 class="nav-main" style="margin-top: -45px;">디지털 쇼룸</h1>
+    <div class="img_box">
+        <div class="item_image" style="width: 150px;">
+            <img src="https://www.ikea.com/images/-6d99ac7918532ea3ab45a453808ac48c.jpg?f=xxxs" class="digital_img"
+                 style="width: 130px;margin-top: 20px;">
+            <p class="item_text">침실</p>
+        </div>
+        <div class="item-image" style="margin-left: 100px; height: fit-content">
+            <img src="https://www.ikea.com/images/-8f7bb73bdec16ab7e15d23c7489b3f50.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 40px;margin-top: 20px;">
+            <p style="margin-left: 40px; margin-top: 10px;">거실</p>
+        </div>
+        <div class="item-image" style="height: fit-content">
+            <img src="https://www.ikea.com/images/veddinge-588d723470398c845beb548d470f9588.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 150px;">
+            <p style="margin-left: 150px; margin-top: 10px;">주방</p>
+        </div>
+        <div class="item-image" style="height: fit-content;">
+            <img src="https://www.ikea.com/images/-49330ab0ef3fb4a738833ae8bb3a54fe.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 40px;">
+            <p style="margin-left: 40px; margin-top: 10px;">다이닝</p>
+        </div>
+        <div class="item-image" style="height: fit-content;">
+            <img src="https://www.ikea.com/images/-52804471b6a1a422bf91cb61aedcd5ae.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 150px;">
+            <p style="margin-left: 150px; margin-top: 10px;">어린이 IKEA</p>
+        </div>
+        <div class="item-image" style="height: fit-content;">
+            <img src="https://www.ikea.com/images/fejka-enhet-tvaellen-vilto-950d38d400a0abde85430ef15b012cb7.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 40px;">
+            <p style="margin-left: 40px;  margin-top: 10px;">욕실</p>
+        </div>
+        <div class="item-image" style="height: fit-content;">
+            <img src="https://www.ikea.com/images/-41b2e130db4a9cc3e1cc0918d84fc919.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 150px;">
+            <p style="margin-left: 150px; margin-top: 10px;">홈오피스</p>
+        </div>
+        <div class="item-image" style="height: fit-content;">
+            <img src="https://www.ikea.com/images/rejsa-omar-39cb7fe33551dc4c8155c62995659b19.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 40px;">
+            <p style="margin-left: 40px; margin-top: 10px;">현관</p>
+        </div>
+        <div class="item-image" style="height: fit-content;">
+            <img src="https://www.ikea.com/images/-cd0e586212284717fa9104a5bf9ae196.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 150px;">
+            <p style="margin-left: 150px; margin-top: 10px;">아웃도어</p>
+        </div>
+        <div class="item-image">
+            <img src="https://www.ikea.com/images/-1daeba779a9970f285d9a3da54127606.jpg?f=xxxs"
+                 style="width: 130px;margin-left: 40px;">
+            <p style="margin-left: 40px; margin-top: 10px;">IKEA for Business</p>
+        </div>
+    </div>
 </div> <!--디지털 쇼룸 사이드 바-->
 </div> <!--네비게이션 바 펼쳤을 때-->
 <div class="top-menu" style="margin-top: -13px;">
@@ -360,14 +401,20 @@
     function digitalClose() {
         document.getElementById('digital_sidenav').style.width = '0';
     }
+
     function productBack() {
         document.getElementById('product_sidenav').style.width = '0';
-        document.getElementById('main_nav').style.marginLeft= '500px';
+        document.getElementById('main_nav').style.marginLeft = '500px';
+    }
+    function digitalBack() {
+        document.getElementById('digital_sidenav').style.width = '0';
+        document.getElementById('main_nav').style.marginLeft = '500px';
     }
 
     function mainOpen() {
         document.getElementById("main_nav").style.marginLeft = "500px";
     }
+
     function mainClose() {
         document.getElementById("main_nav").style.marginLeft = '0px';
     }
