@@ -649,7 +649,7 @@ h3 {
 }
 
 .product-menu__link p {
-    margin-left: 17vh;
+    margin-left: 18vh;
     font-size: 14px;
     margin-bottom: 12px;
 }
@@ -660,7 +660,105 @@ summary {
     margin-left: 17vh;
     font-size: 14px;
 }
+/* 디지털 쇼룸 */
+.digital-showroom__menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    width: 0;
+    height: 100%;
+    background-color: white;
+}
 
+.digital-menu__icon {
+    margin-bottom: -3vh;
+}
+
+.close-logo {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 3vh 0 8vh 7vh;
+}
+
+.digital-btn__close {
+    border: none;
+    border-radius: 50%;
+    padding-top: 4px;
+    background-color: transparent;
+}
+
+.digital-btn__close:hover {
+    background-color: whitesmoke;
+}
+
+.back-title {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: 0 0 2vh 7vh;
+    align-items: center;
+}
+
+.digital-menu__back {
+    border: none;
+    border-radius: 50%;
+    padding: 7px 8px;
+    background-color: transparent;
+}
+
+.digital-menu__back:hover {
+    background-color: whitesmoke;
+}
+
+.digital-title__box {
+    font-weight: bold;
+    font-size: 23px;
+    align-items: center;
+}
+
+.digital-title {
+    margin-left: 5vh;
+}
+
+.digital-menu__img {
+    display: block;
+    margin-top: 0;
+    margin-left: 12vh;
+    list-style: none;
+}
+
+.digital-nav {
+    display: block;
+}
+
+.digital-ul {
+    display: block;
+    list-style: none;
+}
+
+.digital-li {
+    float: left;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.digital-li:hover {
+    text-decoration: underline;
+}
+
+.digital-img {
+    object-fit: cover;
+    width: 130px;
+    height: 75px;
+}
+
+.digital-img__title {
+    margin-top: 1.5vh;
+    margin-bottom: 4vh;
+}
 
 /*----- -----   -----   -----   -----*/
 @media screen and (max-width: 1200px) {
