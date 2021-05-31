@@ -23,12 +23,17 @@ body {
     font-size: 12px;
 }
 
+.status-bar__element a:hover {
+    color: white;
+}
+
 .status-bar__icon {
     color: white;
     width: 17px;
     height: 17px;
     margin: auto 1vh;
 }
+
 /* -----    -----   -----   -----   -----*/
 .top-menu {
     /*background-color: #0058a3;*/
@@ -93,7 +98,7 @@ body {
 
 .searchbar {
     width: 720px;
-    display:grid;
+    display: grid;
     grid-template-columns: 15px 630px 15px;
     line-height: 50px;
 }
@@ -111,6 +116,7 @@ body {
     margin-left: 40px;
     margin-top: 5px;
 }
+
 /*----- -----   -----   -----   -----*/
 /* 사이드 메뉴 */
 #menu-btn {
@@ -128,6 +134,7 @@ body {
 #menu-btn:hover {
     background-color: whitesmoke;
 }
+
 #menu-btn:focus {
     background-color: lightgray;
 }
@@ -137,6 +144,7 @@ body {
     height: 22px;
     margin: 5px 0 0 1px;
 }
+
 /*----- -----   -----   -----   -----*/
 .list-wrap {
     display: grid;
@@ -237,6 +245,7 @@ a:hover {
 #creat-list:hover {
     background-color: #2d3436;
 }
+
 /*----- -----   -----   -----   -----*/
 /*footer*/
 footer {
@@ -281,6 +290,7 @@ h3 {
 #footer span {
     color: black;
 }
+
 /*----- -----   -----   -----   -----*/
 /* 왼쪽 메뉴 */
 .left-menu {
@@ -328,6 +338,7 @@ h3 {
     background-color: white;
     padding-top: 4px;
 }
+
 .left-close:hover {
     border-radius: 50%;
     background-color: whitesmoke;
@@ -349,14 +360,17 @@ h3 {
     font-size: 36px;
     font-weight: bold;
 }
+
 .left-menu__middle {
     font-size: 15px;
     font-weight: bold;
 }
+
 .left-menu__bottom {
     margin-top: 6vh;
     font-size: 15px;
 }
+
 .left-menu__bottom p {
     margin-bottom: 1vh;
 }
@@ -367,6 +381,7 @@ h3 {
     display: flex;
     justify-content: space-around;
 }
+
 .language {
     border: lightgrey solid 1px;
     border-radius: 20px;
@@ -375,6 +390,7 @@ h3 {
     font-size: 13px;
     font-weight: bold;
 }
+
 .country {
     width: 95px;
     text-align: center;
@@ -384,6 +400,7 @@ h3 {
     border: lightgrey solid 1px;
     border-radius: 20px;
 }
+
 /* 왼쪽 메뉴 끝 */
 /* 오른쪽 메뉴 */
 .right-menu {
@@ -405,6 +422,7 @@ h3 {
     justify-content: space-between;
     padding: 30px;
 }
+
 .right-back {
     border: none;
     border-radius: 50%;
@@ -412,6 +430,7 @@ h3 {
     padding-top: 5px;
     cursor: pointer;
 }
+
 .right-close {
     border: none;
     border-radius: 50%;
@@ -419,6 +438,7 @@ h3 {
     padding-top: 5px;
     cursor: pointer;
 }
+
 .right-menu__icon button:hover {
     background-color: whitesmoke;
 }
@@ -426,6 +446,7 @@ h3 {
 .right-menu__title {
     padding: 30px;
 }
+
 .right-menu__title h3 {
     font-size: 26px;
 }
@@ -442,11 +463,13 @@ h3 {
     display: flex;
     flex-direction: row;
 }
+
 .right-menu__item a {
     font-weight: bold;
     font-size: 15px;
     color: black;
 }
+
 .right-menu__selected {
     color: #005399;
     background-color: #dff9fb;
@@ -455,6 +478,7 @@ h3 {
     padding: 7px;
     margin-left: 1vh;
 }
+
 .right-menu__count {
     font-size: 12px;
 }
@@ -466,6 +490,7 @@ h3 {
     padding: 10px 13px;
     background-color: transparent;
 }
+
 .list-copy:hover {
     background-color: whitesmoke;
 }
@@ -486,14 +511,17 @@ h3 {
     z-index: 1;
     overflow-x: hidden;
 }
+
 #list-form {
     width: 300px;
     outline: none;
     border: none;
     border-bottom: black solid 1px;
 }
+
 #list-form:focus {
-    border-bottom: #1e3799 solid 2px; !important;
+    border-bottom: #1e3799 solid 2px;
+!important;
 }
 
 .change-icon {
@@ -502,6 +530,7 @@ h3 {
     justify-content: space-between;
     width: 110px;
 }
+
 .change-icon button {
     border: none;
     border-radius: 50%;
@@ -510,9 +539,11 @@ h3 {
     background-color: transparent;
     outline: none;
 }
+
 .change-icon button:hover {
     background-color: whitesmoke;
 }
+
 /* 위시리스트 만들기 input */
 .new-list__wrap {
     display: flex;
@@ -522,6 +553,7 @@ h3 {
     margin-top: 6vh;
     align-items: center;
 }
+
 .new-list__input input {
     width: 145vh;
     height: 5vh;
@@ -529,25 +561,30 @@ h3 {
     outline: none;
     border-bottom: black solid 1px;
 }
+
 .new-list__input input:focus {
     border-bottom: #1e3799 solid 2px;
 }
+
 .new-list__btn {
     display: flex;
     width: 100px;
     margin-right: 1vh;
     justify-content: space-between;
 }
+
 .newList {
     border: none;
     border-radius: 50%;
     padding: 10px 15px;
     background-color: transparent;
 }
+
 .newList:hover {
     background-color: whitesmoke;
     outline: none;
 }
+
 /*----- -----   -----   -----   -----*/
 /* 제품 이미지 */
 .item-img {
@@ -555,6 +592,7 @@ h3 {
     margin-top: 2px;
     margin-left: 2px;
 }
+
 /*----- -----   -----   -----   -----*/
 /* 모든 제품 */
 .all-product__menu {
@@ -624,21 +662,83 @@ summary {
 }
 
 
-
-
-
-
 /*----- -----   -----   -----   -----*/
 @media screen and (max-width: 1200px) {
-    body {width: 100vw;}
-    .status-bar {width: 100%;}
-    .top-menu {display: flex;}
-    .top-menu__start {margin-left: 10vh;}
-    #menu-btn {margin-left: -2vh;}
-    .top-middle {margin-left: -2vh; width: 85vh}
-    .search {margin-left: 2vh;}
-    .camera {margin-left: -23vh;}
-    #footer {width: 100%;}
-    .top-end {margin-left: -20vh;}
+    body {
+        width: 100vw;
+    }
+
+    .status-bar {
+        width: 100%;
+    }
+
+    .top-menu {
+        display: flex;
+    }
+
+    .top-menu__start {
+        margin-left: 6vh;
+    }
+
+    .top-menu__link {
+        display: none;
+    }
+
+    #menu-btn {
+        position: absolute;
+    }
+
+    .top-middle {
+        margin-left: -7vh;
+        width: 110vh;
+    }
+
+    .searchbar {
+        margin-right: 35vh;
+        margin-left: -15vh;
+    }
+
+    .search {
+        margin-left: -2vh;
+    }
+
+    .camera {
+        margin-left: -1vh;
+    }
+
+    #footer {
+        width: 100%;
+    }
+
+    .top-end {
+        margin-left: -30vh;
+        margin-right: 15vh;
+    }
+
+    .svg_menu {
+        right: 7vh;
+    }
+
+    .delivery {
+        display: none;
+    }
+
+    .item-content{
+        width: 95%;
+    }
+
+    .list-btn {
+        margin-right: 10vh;
+    }
+
+    #creat-list {
+        margin-top: 10vh;
+    }
+
+    .item-img {
+        height: 95%;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
 }
 
