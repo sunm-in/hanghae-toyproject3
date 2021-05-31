@@ -31,6 +31,7 @@
 </head>
 
 <body>
+<!--메뉴바-->
 <aside class="menu_aside" id="menu_aside">
     <div class="aside_icon">
         <button class="close" onclick="menu_close()">
@@ -46,7 +47,7 @@
     <div class="aside_title">
         <div style="padding: 32px 0px">
             <div style="font-weight: 700; font-size: 2.25rem;">
-                <p>모든 제품</p>
+                <p><a href="#" onclick="allprodect()">모든 제품</a></p>
                 <p style="margin-top: 20px">디지털 쇼룸</p>
             </div>
             <div style="font-weight: 700; margin-top: 20px; font-size: 14px">
@@ -66,8 +67,49 @@
             </div>
         </div>
     </div>
-
+    <!--  모든제품 클릭 시 메뉴  -->
+    <div id="all_products">
+        <div class="product-menu__header">
+            <button class="product-menu-btn__back" type="button" onclick="allProduct_back()">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+            </button>
+            <div style="margin-left: 5vh;" class="title-box">
+                <p><a class="header-title all">모든 제품</a></p>
+                <p><a class="header-title sustainable" href="#">지속가능한 제품</a></p>
+            </div>
+        </div>
+        <div class="product-menu__link">
+            <p><a>홈스마트</a></p>
+            <p><a>가구</a></p>
+            <p><a>침대/매트리스</a></p>
+            <p><a>주방가구</a></p>
+            <p><a>어린이 IKEA</a></p>
+            <p><a>수납정리</a></p>
+            <p><a>텍스타일</a></p>
+            <p><a>홈데코/장식품</a></p>
+            <p><a>욕실</a></p>
+            <p><a>야외용 제품</a></p>
+            <p><a>조명</a></p>
+            <p><a>러그/매트/데크</a></p>
+            <details class="product-menu__more">
+                <summary onclick="more()">더보기</summary>
+                <p><a>화분/식물</a></p>
+                <p><a>주방용품</a></p>
+                <p><a>여름용 소품</a></p>
+                <p><a>가전제품</a></p>
+                <p><a>세탁/청소</a></p>
+                <p><a>셀프 인테리어</a></p>
+                <p><a>반려동물</a></p>
+                <p><a>IKEA 푸드</a></p>
+            </details>
+        </div>
+    </div>
 </aside>
+<!--메인-->
 <div class="zbody">
     <header>
         <div class="status-bar">
@@ -110,7 +152,7 @@
                 </div>
                 <a href="/"><img width="90vh" src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"
                                  id="logo"></a>
-                <a href="#" id="allproducts">모든 제품</a>
+                <a href="#" id="allproducts" onclick="allProduct_open()">모든 제품</a>
                 <a href="#" id="showroom">디지털 쇼룸</a>
             </div>
             <div class="top-menu__element searchbar">
@@ -305,19 +347,19 @@
                     </div>
                 </div>
                 <div id="chkbox">
-                    <input type="checkbox" id="agreea"  > <label>(필수) 약관을 모두 읽고 동의합니다. <a
+                    <input type="checkbox" id="agreea"> <label>(필수) 약관을 모두 읽고 동의합니다. <a
                         href="https://www.ikea.com/kr/ko/customer-service/terms-conditions/"><span>이용약관</span></a></label>
                 </div>
                 <div id="chkbox">
-                    <input type="checkbox" id="agreeb"  > <label>(필수) 개인정보 수집ㆍ이용에 동의합니다. <a
+                    <input type="checkbox" id="agreeb"> <label>(필수) 개인정보 수집ㆍ이용에 동의합니다. <a
                         href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/-pub20a57ecd"><span>개인정보 수집ㆍ이용 동의</span></a></label>
                 </div>
                 <div id="chkbox">
-                    <input type="checkbox" id="agreec"  > <label>(필수) 개인정보 처리 위탁에 동의합니다. <a
+                    <input type="checkbox" id="agreec"> <label>(필수) 개인정보 처리 위탁에 동의합니다. <a
                         href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/-pubadc349ed"><span>개인정보 처리 위탁</span></a></label>
                 </div>
                 <div id="chkbox">
-                    <input type="checkbox" id="agreed"  > <label>(필수) 개인정보 국외이전에 동의합니다. <a
+                    <input type="checkbox" id="agreed"> <label>(필수) 개인정보 국외이전에 동의합니다. <a
                         href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/-pub1c988c9a"><span>개인정보 국외이전</span></a></label>
                 </div>
             </div>
@@ -437,11 +479,36 @@
     function menu_open() {
         $('#menu_aside').show()
         $('#menu_aside').css('animation-name', 'scale-in-hor-left')
+        $('#all_products').hide()
+        $('.aside_title').show()
 
     }
 
     function menu_close() {
         $('#menu_aside').css('animation-name', 'scale-out-hor-left')
+    }
+
+    //모든제품
+    function allProduct_open() {
+        $('#menu_aside').show()
+        $('#menu_aside').css('animation-name', 'scale-in-hor-left')
+        $('#all_products').show()
+        $('.aside_title').hide()
+    }
+
+    function allProduct_back() {
+        $('#menu_aside').show()
+        $('#all_products').hide()
+        $('.aside_title').show()
+    }
+
+    function allprodect() {
+        $('#all_products').show()
+        $('.aside_title').hide()
+    }
+
+    function more() {
+        $('summary').hide()
     }
 
     //패밀리 가입 여부에 따른 회원가입 타이틀 변경
