@@ -112,3 +112,40 @@ label {
 .minimenu {
     display: none;
 }
+/* 솔루션 시작 */
+.solution{
+    margin-left: 11vh;
+    margin-top: 20px; /*임시*/
+    width: 1300px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.solution-box{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    margin-top: 40px;
+}
+.solution-card {
+    width: 240px;
+    height: 320px;
+    margin-top: 30px;
+}
+.solution-cards{
+    margin-left: 30px;
+    position: relative;
+}
+.solution-btn{
+    position: absolute;
+    color: black;
+    width: 150px;
+    height: 40px;
+    margin-top: 280px;
+    margin-left: -200px;
+    background-color: whitesmoke;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100px;
+    padding: 5px 25px 20px 20px;
+}
