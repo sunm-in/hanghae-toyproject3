@@ -31,7 +31,7 @@
 </head>
 
 <body>
-<!--메뉴바-->
+<!--메뉴바 (메뉴, 모든제품, 디지털 쇼룸)-->
 <aside class="menu_aside" id="menu_aside">
     <div class="aside_icon">
         <button class="close" onclick="menu_close()">
@@ -48,7 +48,7 @@
         <div style="padding: 32px 0px">
             <div style="font-weight: 700; font-size: 2.25rem;">
                 <p><a href="#" onclick="allprodect()">모든 제품</a></p>
-                <p style="margin-top: 20px">디지털 쇼룸</p>
+                <p style="margin-top: 20px"><a href="#" onclick="digitalshowroom()">디지털 쇼룸</a></p>
             </div>
             <div style="font-weight: 700; margin-top: 20px; font-size: 14px">
                 <p>할인 중</p>
@@ -108,10 +108,72 @@
             </details>
         </div>
     </div>
+    <!--  디지털 쇼룸 클릭 시 메뉴  -->
+    <div id="digitalshowroom">
+        <div class="product-menu__header">
+            <button class="product-menu-btn__back" type="button" onclick="showroom_back()">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+            </button>
+            <div style="margin-left: 5vh;" class="title-box">
+                <p><a class="header-title all">디지털 쇼룸</a></p>
+            </div>
+        </div>
+        <div class="digital-menu__img">
+        <nav class="digital-nav">
+            <ul class="digital-ul">
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-6d99ac7918532ea3ab45a453808ac48c.jpg?f=xxxs">
+                    <p class="digital-img__title">침실</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-8f7bb73bdec16ab7e15d23c7489b3f50.jpg?f=xxxs">
+                    <p class="digital-img__title">거실</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/veddinge-588d723470398c845beb548d470f9588.jpg?f=xxxs">
+                    <p class="digital-img__title">주방</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-49330ab0ef3fb4a738833ae8bb3a54fe.jpg?f=xxxs">
+                    <p class="digital-img__title">다이닝</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-52804471b6a1a422bf91cb61aedcd5ae.jpg?f=xxxs">
+                    <p class="digital-img__title">어린이 IKEA</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/fejka-enhet-tvaellen-vilto-950d38d400a0abde85430ef15b012cb7.jpg?f=xxxs">
+                    <p class="digital-img__title">욕실</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-41b2e130db4a9cc3e1cc0918d84fc919.jpg?f=xxxs">
+                    <p class="digital-img__title">홈오피스</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/rejsa-omar-39cb7fe33551dc4c8155c62995659b19.jpg?f=xxxs">
+                    <p class="digital-img__title">현관</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-cd0e586212284717fa9104a5bf9ae196.jpg?f=xxxs">
+                    <p class="digital-img__title">아웃도어</p>
+                </li>
+                <li class="digital-li">
+                    <img class="digital-img" src="https://www.ikea.com/images/-1daeba779a9970f285d9a3da54127606.jpg?f=xxxs">
+                    <p class="digital-img__title">IKEA for Business</p>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </div>
 </aside>
 <!--메인-->
 <div class="zbody">
     <header>
+        <!--상단-->
         <div class="status-bar">
             <div class="status-bar__element">
                 <svg class="w-6 h-6 status-bar__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -139,6 +201,7 @@
                     베스트셀러</a>
             </div>
         </div>
+        <!--상단 아이콘바-->
         <div class="top-menu">
             <div class="top-menu__element top-start">
                 <div>
@@ -153,7 +216,7 @@
                 <a href="/"><img width="90vh" src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"
                                  id="logo"></a>
                 <a href="#" id="allproducts" onclick="allProduct_open()">모든 제품</a>
-                <a href="#" id="showroom">디지털 쇼룸</a>
+                <a href="#" id="showroom" onclick="digital_open()">디지털 쇼룸</a>
             </div>
             <div class="top-menu__element searchbar">
         <span>
@@ -213,6 +276,7 @@
         </div>
     </header>
     <div id="letin">
+        <!--왼쪽 회원가입과 img-->
         <div class="left">
             <div>
                 <h1 id="chked_yes" style="font-weight: bold; margin-bottom: 0px"><span style="color: #0058a3">IKEA Family</span>
@@ -225,8 +289,11 @@
             </div>
             <img src="../static/img/letin.jpeg" height="1120" width="416" class="img">
         </div>
+        <!--중간 공백-->
         <div class="none"></div>
+        <!--오른쪽 회원가입 폼-->
         <div class="right">
+            <!--family가입여부-->
             <p style="font-weight: bold">IKEA Family에 가입하시겠어요?</p>
             <div class="checks">
                 <div class="chk">
@@ -237,6 +304,7 @@
                     <input type="radio" id="no" name="chk" onclick="no()">
                     <label for="no">아니요, 추가 혜택 없이 온라인 몰만 가입하고 싶습니다. <span>IKEA 온라인몰 혜택</span></label></div>
             </div>
+            <!--개인정보 입력란-->
             <div class="info">
                 <div class="inputbox">
                     <input type="text" autocomplete="none" required onclick="infoa()" id="personala">
@@ -329,6 +397,7 @@
                 </button>
                 <p id="filedg" class="filed" style="padding-top: 30px">비밀번호는 필수 필드입니다.</p>
             </div>
+            <!--약관 동의-->
             <div>
                 <div id="chkbox">
                     <div>
@@ -363,6 +432,7 @@
                         href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/-pub1c988c9a"><span>개인정보 국외이전</span></a></label>
                 </div>
             </div>
+            <!--가입 버튼-->
             <button id="btn_letin" onclick="letin()">가입하기</button>
         </div>
     </div>
@@ -481,6 +551,7 @@
         $('#menu_aside').css('animation-name', 'scale-in-hor-left')
         $('#all_products').hide()
         $('.aside_title').show()
+        $('#digitalshowroom').hide()
 
     }
 
@@ -494,6 +565,7 @@
         $('#menu_aside').css('animation-name', 'scale-in-hor-left')
         $('#all_products').hide()
         $('.aside_title').show()
+        $('#digitalshowroom').hide()
     }
 
     //모든제품
@@ -502,21 +574,46 @@
         $('#menu_aside').css('animation-name', 'scale-in-hor-left')
         $('#all_products').show()
         $('.aside_title').hide()
+        $('#digitalshowroom').hide()
     }
 
     function allProduct_back() {
         $('#menu_aside').show()
         $('#all_products').hide()
         $('.aside_title').show()
+        $('#digitalshowroom').hide()
     }
 
     function allprodect() {
         $('#all_products').show()
         $('.aside_title').hide()
+        $('#digitalshowroom').hide()
     }
 
     function more() {
         $('summary').hide()
+    }
+
+    //디지털 쇼룸
+    function digital_open() {
+        $('#menu_aside').show()
+        $('#menu_aside').css('animation-name', 'scale-in-hor-left')
+        $('#all_products').hide()
+        $('.aside_title').hide()
+        $('#digitalshowroom').show()
+    }
+
+    function showroom_back() {
+        $('#menu_aside').show()
+        $('#all_products').hide()
+        $('.aside_title').show()
+        $('#digitalshowroom').hide()
+    }
+
+    function digitalshowroom() {
+        $('#all_products').hide()
+        $('.aside_title').hide()
+        $('#digitalshowroom').show()
     }
 
     //패밀리 가입 여부에 따른 회원가입 타이틀 변경

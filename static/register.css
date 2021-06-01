@@ -187,6 +187,49 @@ summary {
     font-size: 14px;
 }
 
+/* 디지털 쇼룸 */
+#digitalshowroom {
+    width: 420px;
+    height: 600px;
+}
+.digital-menu__img {
+    display: block;
+    margin-top: 0;
+    margin-left: 8vh;
+    list-style: none;
+}
+
+.digital-nav {
+    display: block;
+}
+
+.digital-ul {
+    display: block;
+    list-style: none;
+}
+
+.digital-li {
+    float: left;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.digital-li:hover {
+    text-decoration: underline;
+}
+
+.digital-img {
+    object-fit: cover;
+    width: 130px;
+    height: 75px;
+    cursor: pointer;
+}
+
+.digital-img__title {
+    margin-top: 1.5vh;
+    margin-bottom: 4vh;
+}
 /*------------------끝----------------*/
 
 
