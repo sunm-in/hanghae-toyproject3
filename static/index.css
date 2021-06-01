@@ -153,9 +153,9 @@ label {
 /* ----- 추천 제품 ----- */
 .recommendation-wrap {
     display: block;
-    background-color: #dff9fb;
     width: 90%;
     margin-left: 15vh;
+    margin-top: 10vh;
 }
 
 .recommendation-box {
@@ -187,7 +187,6 @@ label {
 
 .wish-btn__div {
     display: block;
-    background-color: whitesmoke;
 }
 
 .wish-btn {
@@ -237,7 +236,7 @@ label {
 }
 
 .product-information {
-    background-color: lightgrey;
+
 }
 
 .product-desc a {
