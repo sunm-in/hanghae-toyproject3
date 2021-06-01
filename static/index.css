@@ -149,3 +149,135 @@ label {
     border-radius: 100px;
     padding: 5px 25px 20px 20px;
 }
+
+/* ----- 추천 제품 ----- */
+.recommendation-wrap {
+    display: block;
+    background-color: #dff9fb;
+    width: 90%;
+    margin-left: 15vh;
+}
+
+.recommendation-box {
+
+}
+
+.recommendation-subtitle {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.recommendation-product {
+    margin-top: 5vh;
+    margin-left: 3vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+
+}
+
+.product-list {
+
+}
+
+.recommendation-product__img {
+    display: block;
+    width: 100%;
+}
+
+.wish-btn__div {
+    display: block;
+    background-color: whitesmoke;
+}
+
+.wish-btn {
+    display: block;
+    position: relative;
+    width: 40px;
+    /*float: right;*/
+    margin-left: 27vh;
+    border: none;
+    background-color: transparent;
+    color: lightgrey;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.wish-btn:hover {
+    color: black;
+}
+
+.cart-btn {
+    display: block;
+    position: relative;
+    width: 40px;
+    /*float: right;*/
+    /*margin-top: 20vh;*/
+    margin-left: 27vh;
+    padding-top: 7px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: #0058a3;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.cart-btn:hover {
+    background-color: darkblue;
+}
+
+.wish-btn__div:hover>button {
+    visibility: visible;
+}
+
+.product-img {
+    display: block;
+    margin-left: 2vh;
+}
+
+.product-information {
+    background-color: lightgrey;
+}
+
+.product-desc a {
+    text-decoration: none;
+    color: black;
+}
+
+.product-desc p {
+    margin: 0;
+    padding: 0;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.product-name:hover {
+    text-decoration: underline;
+}
+
+.product-size {
+    font-size: 15px;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product-option {
+    font-size: 12px;
+}
+
+.recommendation-product::-webkit-scrollbar {
+    background-color: lightgrey;
+    height: 3px;
+}
+
+.recommendation-product::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+/* ----- 추천 제품 끝 ----- */
