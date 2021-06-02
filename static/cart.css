@@ -512,7 +512,14 @@ h3 {
     width: 240px;
     height: 100px;
 
+}
+.recommendation::-webkit-scrollbar{
+    height: 2px;
+    background-color: #d6d6d6;
+}
 
+.recommendation::-webkit-scrollbar-thumb {
+    background-color: black;
 }
 
 /*추천제품 가로스크롤 끝*/
