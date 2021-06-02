@@ -112,30 +112,184 @@ label {
 .minimenu {
     display: none;
 }
+
+/* 프로모션 */
+#promotion {
+    margin: 20px 0px 0px 84px;
+    width: 1300px;
+    height: 840px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#promotion::-webkit-scrollbar {
+    height: 2px;
+    background-color: #d6d6d6;
+}
+
+#promotion::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+#promotion a {
+    color: black;
+    text-decoration: none;
+}
+
+#promotion svg {
+    width: 24px;
+    height: 24px;
+}
+
+.promotion_title {
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+
+.cards_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.promotion_card {
+    width: 410px;
+    height: 742px;
+    margin-right: 30px;
+}
+
+.promotion_card:hover h4 {
+    text-decoration: underline;
+}
+
+.promotion_card h4 {
+    font-weight: bold;
+}
+
+.promotion_card p {
+    font-size: 17px;
+}
+
+.promotion_card_flex {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.promotion_img {
+    width: 410px;
+    height: 410px;
+}
+
+.promotion_firstcard {
+    background-color: #9E7A71;
+    height: 330px;
+    padding: 32px;
+}
+
+.promotion_secondcard {
+    background-color: #4c6485;
+    height: 330px;
+    padding: 32px;
+    color: white;
+}
+
+.promotion_thirdcard {
+    background-color: #64BAD8;
+    height: 330px;
+    padding: 32px;
+}
+
+.promotion_fourthcard {
+    background-color: rgba(245, 245, 245, 1);
+    height: 330px;
+    padding: 32px;
+}
+
+.card_ment {
+    margin: 0px;
+    line-height: 25px;
+    height: 170px;
+}
+
+.next_btn_black {
+    color: white;
+    width: 56px;
+    height: 56px;
+    background-color: black;
+    line-height: 68px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.next_btn_white {
+    color: black;
+    width: 56px;
+    height: 56px;
+    background-color: white;
+    line-height: 68px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.moveleft {
+    color: white;
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    line-height: 56px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 60px;
+    position: relative;
+    float: left;
+    bottom: 430px;
+    display: none;
+}
+
+.moveright {
+    color: white;
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    line-height: 56px;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    float: right;
+    bottom: 430px;
+    margin-right: 30px;
+    display: none;
+}
+
+
 /* 솔루션 시작 */
-.solution{
+.solution {
     margin-left: 11vh;
     margin-top: 20px; /*임시*/
     width: 1300px;
     overflow-x: scroll;
     overflow-y: hidden;
 }
-.solution-box{
+
+.solution-box {
     display: flex;
     flex-direction: row;
     height: 400px;
     margin-top: 40px;
 }
+
 .solution-card {
     width: 240px;
     height: 320px;
     margin-top: 30px;
 }
-.solution-cards{
+
+.solution-cards {
     margin-left: 30px;
     position: relative;
 }
-.solution-btn{
+
+.solution-btn {
     position: absolute;
     color: black;
     width: 150px;
@@ -226,7 +380,7 @@ label {
     background-color: darkblue;
 }
 
-.wish-btn__div:hover>button {
+.wish-btn__div:hover > button {
     visibility: visible;
 }
 
@@ -279,4 +433,5 @@ label {
 .recommendation-product::-webkit-scrollbar-thumb {
     background-color: black;
 }
+
 /* ----- 추천 제품 끝 ----- */
