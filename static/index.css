@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 svg {
@@ -310,6 +311,14 @@ label {
     text-align: center;
     border-radius: 100px;
     padding: 5px 25px 20px 20px;
+}
+.solution::-webkit-scrollbar {
+    height: 2px;
+    background-color: #d6d6d6;
+}
+
+.solution::-webkit-scrollbar-thumb {
+    background-color: black;
 }
 
 /* ----- 추천 제품 ----- */
