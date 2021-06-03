@@ -334,8 +334,7 @@ label {
 .recommendation-wrap {
     display: block;
     width: 90%;
-    margin-left: 15vh;
-    margin-top: 10vh;
+    margin: 7vh 0 7vh 10vh;
 }
 
 .recommendation-box {
