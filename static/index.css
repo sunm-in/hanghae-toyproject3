@@ -796,3 +796,51 @@ h3 {
     margin-bottom: 5vh;
 }
 /* 여름에 맞는 분위기를 켜주세요 끝 */
+
+/* 배송 서비스, 조립 서비스 */
+.delivery-assemble__wrap {
+    margin: 3vh 0 7vh 10.5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.delivery-box {
+    background-color: whitesmoke;
+    width: 650px;
+    height: 160px;
+    margin-right: 1px;
+    text-align: center;
+}
+
+.assemble-box {
+    background-color: whitesmoke;
+    width: 650px;
+    height: 160px;
+    text-align: center;
+}
+
+.delivery-title {
+    margin: 0;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.assemble-title {
+    margin: 0;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.p-text {
+    font-size: 15px;
+    margin: 0;
+}
+
+.more {
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* 배송 서비스, 조립 서비스 끝 */
