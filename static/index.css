@@ -21,6 +21,13 @@ label {
     position: absolute;
 }
 
+/*footer고정을 위한 body 고정*/
+.body_wrap {
+    padding-bottom: 1650px;
+    position: relative;
+    min-height: 100%;
+}
+
 .status-bar {
     display: flex;
     justify-content: center;
@@ -139,6 +146,7 @@ label {
 #promotion::-webkit-scrollbar-thumb {
     background-color: black;
 }
+
 #promotion a {
     color: black;
     text-decoration: none;
@@ -312,6 +320,7 @@ label {
     border-radius: 100px;
     padding: 5px 25px 20px 20px;
 }
+
 .solution::-webkit-scrollbar {
     height: 2px;
     background-color: #d6d6d6;
@@ -452,13 +461,138 @@ label {
 }
 
 /* ----- 추천 제품 끝 ----- */
+/*홈퍼니싱 아이디어*/
+#home {
+    margin: 20px 0px 0px 84px;
+    width: 1300px;
+    height: 840px;
+}
+
+.home_title {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.home_btns_grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.home_btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.home_btn {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 14.5px;
+}
+
+/*홈퍼니싱 아이디어 - 이미지*/
+.home_idea_box {
+    margin-top: 15px;
+    width: 1300px;
+}
+
+.home_idea_flex {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.home_ideaA {
+    width: 411px;
+    height: 554px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.home_ideaB {
+    width: 411px;
+    height: 411px;
+    top: -73px;
+    margin-bottom: 20px;
+}
+
+.home_ideaC {
+    width: 411px;
+    height: 554px;
+    position: relative;
+}
+
+.active {
+    border: 1px black solid;
+}
+
+.guide {
+    width: 411px;
+    height: 195px;
+    background-color: #027015;
+    color: white;
+    margin-top: 360px;
+    padding: 30px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.guide_img {
+    position: absolute;
+}
+
+.guide p {
+    margin-top: 10px;
+}
+
+
+.guide_btn {
+    margin-top: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 53px;
+}
+
+.home_guide {
+    display: block;
+}
+
+.after_guide {
+    margin-top: 580px;
+}
+
+/*더보기 1*/
+.home_more_btn {
+    background-color: black;
+    color: white;
+    width: 122px;
+    height: 40px;
+    display: block;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: auto;
+}
+
+.home_more_btn:focus {
+    outline: none;
+}
+
+
 /*footer*/
 /*footer*/
 footer {
+    width: 100%;
     height: 754px;
     background-color: #f5f5f5;
     padding: 4rem 0 0 0;
     font-size: 14px;
+    position: absolute;
 }
 
 h3 {
