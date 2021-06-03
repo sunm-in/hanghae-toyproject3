@@ -707,3 +707,57 @@ h3 {
     padding: 10px 20px 10px 20px;
     font-weight: bold;
 }
+
+/* 메인페이지 상단 새로운 소식 */
+.new-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8vh 0 5vh 6vh;
+}
+
+.new-img {
+    width: 880px;
+    height: 450px;
+}
+
+.new-box__title {
+    width: 420px;
+    background-color: #B1D8F5;
+    text-align: left;
+}
+
+.new-title {
+    width: 75%;
+    margin: 7vh auto 0 auto;
+}
+
+.new-box__title h3 {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.new-box__title p {
+    font-size: 14px;
+}
+
+.new-btn {
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    width: 180px;
+    padding: 8px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.new-btn:hover {
+    opacity: 0.7;
+}
+
+.new-box__title span {
+    font-weight: bold;
+    font-size: 13px;
+}
+/* 메인페이지 상단 새로운 소식 끝 */
