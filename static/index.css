@@ -23,7 +23,7 @@ label {
 
 /*footer고정을 위한 body 고정*/
 .body_wrap {
-    padding-bottom: 1650px;
+    padding-bottom: 180px; /*기존 설정 1650// 수정이유 : footer가 너무 동떨어져있어서 스크롤을 한참 내려야해서 수정했습니다.*/
     position: relative;
     min-height: 100%;
 }
@@ -282,7 +282,7 @@ label {
 /* 솔루션 시작 */
 .solution {
     margin-left: 11vh;
-    margin-top: 20px; /*임시*/
+    margin-top: 50px; /*임시*/
     width: 1300px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -623,4 +623,87 @@ h3 {
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 25px;
+}
+
+/*신제품 시작*/
+.new-item {
+    width: 1300px;
+    margin-left: 11vh;
+    margin-top: 100px;
+}
+
+.new-item-btn {
+    position: absolute;
+    color: black;
+    height: 40px;
+    border: #d6d6d6 solid 1px;
+    background-color: white;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 100px;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    margin-left: 1150px;
+    margin-top: -50px;
+}
+.new-item-img{
+    width: 630px;
+    margin-top: 20px;
+}
+/*신제품 끝*/
+
+/*카탈로그 시작*/
+.catalogue{
+    width: 1300px;
+    margin-left: 11vh;
+    margin-top: 60px;
+}
+.catalogue-btn-box{
+    width: 1300px;
+    margin-left: 11vh;
+    display: flex;
+    flex-direction: row;
+}
+.catalogue-btn{
+    margin-top: 40px;
+    margin-bottom: 40px; /* 임시 */
+    display: block;
+    width: 130px;
+    color: black;
+    height: 40px;
+    border: #d6d6d6 solid 1px;
+    background-color: white;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 100px;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+}
+/*카탈로그 시작*/
+
+/*제품 리콜 시작*/
+.product-recall{
+    width: 1300px;
+    margin-left: 11vh;
+    display: flex;
+    flex-direction: row;
+}
+.product-recall-btn-box{
+    width: 1300px;
+    margin-left: 11vh;
+    display: flex;
+    flex-direction: row;
+}
+.product-recall-btn{
+    margin-top: 40px;
+    width: 150px;
+    color: black;
+    height: 40px;
+    border: #d6d6d6 solid 1px;
+    background-color: white;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 100px;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
 }
