@@ -717,16 +717,9 @@ h3 {
     padding: 10px 20px 10px 20px;
     font-weight: bold;
 }
-<<<<<<< HEAD
+
 /*제품 리콜 끝*/
-.svg_top{
-    border: 0px;
-    border-radius: 84px;
-    position: fixed;
-    left: 30px;
-    top: 750px;
-}
-=======
+
 
 /* 메인페이지 상단 새로운 소식 */
 .new-box {
@@ -864,4 +857,10 @@ h3 {
     cursor: pointer;
 }
 /* 배송 서비스, 조립 서비스 끝 */
->>>>>>> f84f3ad541d8009570a95e74cc7f8a557637a02b
+.svg_top{
+    border: 0px;
+    border-radius: 84px;
+    position: fixed;
+    left: 30px;
+    top: 750px;
+}
