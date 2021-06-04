@@ -829,7 +829,8 @@
             <div class="smart-box">
                 <span>
                     <a href="#">스마트 조명</a>
-                    <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -844,9 +845,15 @@
             <div class="solution-card"
                  style="background-color: forestgreen; font-weight: bold; width: 240px; padding: 50px 30px 30px 40px">
                 <p style="color: white; width: 240px; padding-right: 85px;">집에서 지속가능한 생활을 실천할 수 있는 아이디어</p>
-                <btn style="background-color: whitesmoke; font-size: 25px; width: 40px; text-align: center; display: block; margin-top: 130px; border-radius: 150px;">
-                    →
+                <btn style="background-color: whitesmoke; font-size: 25px; width: 40px; height: 40px; text-align: center; display: block; margin-top: 130px; border-radius: 500px;">
+                    <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg" style="margin-top: 8px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                 </btn>
+                </button>
             </div> <!--아이디어-->
             <div class="solution-cards">
                 <img class="solution-card"
@@ -894,7 +901,15 @@
                 </btn>
             </div><!--지속가능한 먹거리-->
         </div>
+
     </div> <!--  솔루션  -->
+    <btn class="svg_top" onclick="window.scrollTo({top:0, left:0, behavior:'smooth'});"> <!--상단스크롤 버튼-->
+        <svg class="w-6 h-6" stroke="currentColor" viewBox="0 0 24 24" xlmns="http://www.w3.org/2000/svg"
+             width="24" height="24" style="margin-top: 5px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"
+                  d="M12 6.94l8 8-1.413 1.415L12 9.768l-6.587 6.586L4 14.94l8.001-8z"></path>
+        </svg>
+    </btn><!--상단스크롤 버튼 끝-->
     <div class="catalogue"><!--카탈로그 시작-->
         <img class="new-item-img" src="https://www.ikea.com/images/0a/3c/0a3caefd2ed7e92bc5a4656b06e8ae30.jpg?f=xxl">
         <img class="new-item-img" src="https://www.ikea.com/images/27/b9/27b97d64eee6cc4eec70fe0d6c5e3d1c.jpg?f=xxl"
@@ -906,16 +921,21 @@
     </div><!--카탈로그 끝-->
     <section class="delivery-assemble__wrap">
         <div class="delivery-box">
-            <svg style="margin-top: 3vh" width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
+            <svg style="margin-top: 3vh" width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
             </svg>
             <p class="delivery-title">배송 서비스</p>
             <p class="p-text">편리한 배송 옵션을 살펴보세요.</p>
             <p class="more">더 보기</p>
         </div>
         <div class="assemble-box">
-            <svg style="margin-top: 3vh" width="24px" height="24px" focusable="false" viewBox="0 0 24 24" class="pub__svg-icon pub__call-out__icon" aria-hidden="true">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14 6H5v3h9V6zM3 4v7h3.983l-2.31 4H3v6h11v-6h-3.544l2.309-4H16V9h2V8h3V6h-3V5h-2V4H3zm7.456 7l-2.31 4H6.983l2.31-4h1.163zM5 17h7v2H5v-2z"></path>
+            <svg style="margin-top: 3vh" width="24px" height="24px" focusable="false" viewBox="0 0 24 24"
+                 class="pub__svg-icon pub__call-out__icon" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M14 6H5v3h9V6zM3 4v7h3.983l-2.31 4H3v6h11v-6h-3.544l2.309-4H16V9h2V8h3V6h-3V5h-2V4H3zm7.456 7l-2.31 4H6.983l2.31-4h1.163zM5 17h7v2H5v-2z"></path>
             </svg>
             <p class="assemble-title">조립 서비스</p>
             <p class="p-text">IKEA에게 조립을 맡기고 소중한 시간을 아끼세요.</p>
@@ -1030,12 +1050,7 @@
         <btn class="product-recall-btn" style="margin-left: 530px">안전사고 예방 방법</btn>
     </div><!--제품리콜 끝-->
 </div>
-<button class="svg_top">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xlmns="http://www.w3.org/2000/svg"
-    width="24" height="24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.94l8 8-1.413 1.415L12 9.768l-6.587 6.586L4 14.94l8.001-8z"></path>
-    </svg>
-</button>
+
 <footer>
     <div id="footer">
         <div>
@@ -1111,6 +1126,7 @@
             $(".moveright").hide();
         }
     });
+
 </script>
 </body>
 
