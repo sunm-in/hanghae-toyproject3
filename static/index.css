@@ -464,7 +464,7 @@ label {
 #home {
     margin: 20px 0px 0px 84px;
     width: 1300px;
-    height: 840px;
+    height: 900px;
 }
 
 .home_title {
@@ -582,6 +582,9 @@ label {
     outline: none;
 }
 
+.home_more_first {
+    display: none;
+}
 
 /*footer*/
 /*footer*/
