@@ -714,6 +714,7 @@ h3 {
     padding: 10px 20px 10px 20px;
     font-weight: bold;
 }
+<<<<<<< HEAD
 /*제품 리콜 끝*/
 .svg_top{
     border: 0px;
@@ -722,3 +723,142 @@ h3 {
     left: 30px;
     top: 750px;
 }
+=======
+
+/* 메인페이지 상단 새로운 소식 */
+.new-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8vh 0 5vh 6vh;
+}
+
+.new-img {
+    width: 880px;
+    height: 450px;
+}
+
+.new-box__title {
+    width: 420px;
+    background-color: #B1D8F5;
+    text-align: left;
+}
+
+.new-title {
+    width: 75%;
+    margin: 7vh auto 0 auto;
+}
+
+.new-box__title h3 {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.new-box__title p {
+    font-size: 14px;
+}
+
+.new-btn {
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    width: 180px;
+    padding: 8px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.new-btn:hover {
+    opacity: 0.7;
+}
+
+.new-box__title span {
+    font-weight: bold;
+    font-size: 13px;
+}
+/* 메인페이지 상단 새로운 소식 끝 */
+
+/* 여름에 맞는 분위기를 켜주세요 */
+.summer-box {
+    margin: 8vh 0 5vh 11vh;
+}
+
+.summer-box__title h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 5vh;
+}
+
+.summer-img {
+    width: 1300px;
+    height: 700px;
+}
+
+.smart-box span {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 210px;
+    height: 120px;
+    margin-top: -20vh;
+    margin-left: 5vh;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.smart-box a {
+    margin-bottom: 5vh;
+}
+/* 여름에 맞는 분위기를 켜주세요 끝 */
+
+/* 배송 서비스, 조립 서비스 */
+.delivery-assemble__wrap {
+    margin: 3vh 0 7vh 10.5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.delivery-box {
+    background-color: whitesmoke;
+    width: 650px;
+    height: 160px;
+    margin-right: 1px;
+    text-align: center;
+}
+
+.assemble-box {
+    background-color: whitesmoke;
+    width: 650px;
+    height: 160px;
+    text-align: center;
+}
+
+.delivery-title {
+    margin: 0;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.assemble-title {
+    margin: 0;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.p-text {
+    font-size: 15px;
+    margin: 0;
+}
+
+.more {
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* 배송 서비스, 조립 서비스 끝 */
+>>>>>>> f84f3ad541d8009570a95e74cc7f8a557637a02b
