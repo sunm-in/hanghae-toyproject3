@@ -843,11 +843,17 @@
         <h3>지속가능한 내일을 위한 솔루션</h3>
         <div class="solution-box">
             <div class="solution-card"
-                 style="background-color: forestgreen; font-weight: bold; width: 240px; padding: 50px 30px 30px 40px">
+                 style="background-color: #00853E; font-weight: bold; width: 240px; padding: 50px 30px 30px 40px">
                 <p style="color: white; width: 240px; padding-right: 85px;">집에서 지속가능한 생활을 실천할 수 있는 아이디어</p>
-                <btn style="background-color: whitesmoke; font-size: 25px; width: 40px; text-align: center; display: block; margin-top: 130px; border-radius: 150px;">
-                    →
+                <btn style="background-color: whitesmoke; font-size: 25px; width: 40px; height: 40px; text-align: center; display: block; margin-top: 130px; border-radius: 500px;">
+                    <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg" style="margin-top: 8px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                 </btn>
+                </button>
             </div> <!--아이디어-->
             <div class="solution-cards">
                 <img class="solution-card"
@@ -895,7 +901,15 @@
                 </btn>
             </div><!--지속가능한 먹거리-->
         </div>
+
     </div> <!--  솔루션  -->
+    <btn style="display: block; text-align: center;" class="svg_top" onclick="window.scrollTo({top:0, left:0, behavior:'smooth'});"> <!--상단스크롤 버튼-->
+        <svg class="w-6 h-6" stroke="currentColor" viewBox="0 0 24 24" xlmns="http://www.w3.org/2000/svg"
+             width="24" height="24" style="margin-top: 5px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"
+                  d="M12 6.94l8 8-1.413 1.415L12 9.768l-6.587 6.586L4 14.94l8.001-8z"></path>
+        </svg>
+    </btn><!--상단스크롤 버튼 끝-->
     <div class="catalogue"><!--카탈로그 시작-->
         <img class="new-item-img" src="https://www.ikea.com/images/0a/3c/0a3caefd2ed7e92bc5a4656b06e8ae30.jpg?f=xxl">
         <img class="new-item-img" src="https://www.ikea.com/images/27/b9/27b97d64eee6cc4eec70fe0d6c5e3d1c.jpg?f=xxl"
@@ -1092,13 +1106,6 @@
         <btn class="product-recall-btn" style="margin-left: 530px">안전사고 예방 방법</btn>
     </div><!--제품리콜 끝-->
 </div>
-<button class="svg_top">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xlmns="http://www.w3.org/2000/svg"
-         width="24" height="24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 6.94l8 8-1.413 1.415L12 9.768l-6.587 6.586L4 14.94l8.001-8z"></path>
-    </svg>
-</button>
 <footer>
     <div id="footer">
         <div>
@@ -1174,6 +1181,8 @@
             $(".moveright").hide();
         }
     });
+
+
 
     //홈퍼니싱 아이디어 더보기
     function more() {
