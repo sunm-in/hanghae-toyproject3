@@ -646,25 +646,29 @@ h3 {
     margin-left: 1150px;
     margin-top: -50px;
 }
-.new-item-img{
+
+.new-item-img {
     width: 630px;
     margin-top: 20px;
 }
+
 /*신제품 끝*/
 
 /*카탈로그 시작*/
-.catalogue{
+.catalogue {
     width: 1300px;
     margin-left: 11vh;
     margin-top: 60px;
 }
-.catalogue-btn-box{
+
+.catalogue-btn-box {
     width: 1300px;
     margin-left: 11vh;
     display: flex;
     flex-direction: row;
 }
-.catalogue-btn{
+
+.catalogue-btn {
     margin-top: 40px;
     margin-bottom: 40px; /* 임시 */
     display: block;
@@ -679,22 +683,25 @@ h3 {
     padding: 10px 20px 10px 20px;
     font-weight: bold;
 }
+
 /*카탈로그 시작*/
 
 /*제품 리콜 시작*/
-.product-recall{
+.product-recall {
     width: 1300px;
     margin-left: 11vh;
     display: flex;
     flex-direction: row;
 }
-.product-recall-btn-box{
+
+.product-recall-btn-box {
     width: 1300px;
     margin-left: 11vh;
     display: flex;
     flex-direction: row;
 }
-.product-recall-btn{
+
+.product-recall-btn {
     margin-top: 40px;
     width: 150px;
     color: black;
@@ -706,4 +713,12 @@ h3 {
     border-radius: 100px;
     padding: 10px 20px 10px 20px;
     font-weight: bold;
+}
+/*제품 리콜 끝*/
+.svg_top{
+    border: 0px;
+    border-radius: 84px;
+    position: fixed;
+    left: 30px;
+    top: 750px;
 }
