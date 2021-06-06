@@ -19,6 +19,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/cart.css">
     <title>장바구니 페이지 </title>
 </head>
@@ -66,7 +67,8 @@
         <a href="#"><img width="90vh" style="margin-top: 30px; margin-bottom: 50px; margin-left: 160px;"
                          src="https://www.ikea.com/kr/ko/static/ikea-logo.aae6ac7f4cbc58d7d0d2.svg"></a>
         <p class="nav-text" style="color: black; font-size: 35px;" onclick="openProduct();"><a href="#">모든 제품</a></p>
-        <p class="nav-text" style="color: black; font-size: 35px;" onclick="digitalProduct();"><a href="#">디지털 쇼룸</a></p>
+        <p class="nav-text" style="color: black; font-size: 35px;" onclick="digitalProduct();"><a href="#">디지털 쇼룸</a>
+        </p>
         <p class="nav-text"><a>할인중</a></p>
         <p class="nav-text"><a>신제품</a></p>
         <p class="nav-text"><a>더 낮은 새로운 가격</a></p>
@@ -240,17 +242,46 @@
     <h4 class="cart-message" style="margin-top: 6vh;">추천제품</h4>
     <!--추천제품 시작-->
     <div class="recommendation recommendation-image"> <!--추천제품 카드-->
-        <div class-="item-list">
+        <div class="item-list">
+            <button style="outline: none" class="wish-btn">
+                <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </button>
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl"
                  onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911653_pe616502_s5.jpg?f=xl'"
                  onmouseout="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0626021_pe692562_s5.jpg?f=xl'"
                  border="0">
+
             <p class="item-name item-desc">HYLLIS 휠리스</p>
             <p class="desc item-desc">선반유닛,60x27x140 cm</p>
             <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="far fa-star"></i>
+            <span style="font-size: 12px">(16)</span>
+            <p class="product-option">기타 옵션</p>
+            <button style="outline: none; margin-top: -55px;" class="cart-btn">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </button>
         </div>
-        <div class-="item-list">
+        <div class="item-list">
+            <button style="outline: none" class="wish-btn">
+                <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </button>
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/lerberg-shelf-unit-white__0096350_pe235920_s5.jpg?f=xl"
                  onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/lerberg-shelf-unit-white__0578692_pe669516_s5.jpg?f=xl'"
@@ -259,8 +290,31 @@
             <p class="item-name item-desc">LERBERG 레르베리</p>
             <p class="desc item-desc">선반유닛,60x148 cm</p>
             <h5 class="item-desc" style="font-weight: bold;">17,900원</h5>
+            <span>
+                <i style="font-size: 12px" class="fas fa-star"></i>
+                <i style="font-size: 12px" class="fas fa-star"></i>
+                <i style="font-size: 12px" class="fas fa-star"></i>
+                <i style="font-size: 12px" class="fas fa-star"></i>
+                <i style="font-size: 12px" class="far fa-star"></i>
+            </span>
+            <span style="font-size: 12px">(514)</span>
+            <p class="product-option">기타 옵션</p>
+            <button style="outline: none; margin-top: -55px;" class="cart-btn">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </button>
         </div>
-        <div class-="item-list">
+        <div class="item-list">
+            <button style="outline: none" class="wish-btn">
+                <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </button>
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/laiva-bookcase-black-brown__0644278_pe702556_s5.jpg?f=xl"
                  onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/laiva-bookcase-black-brown__0394575_pe561398_s5.jpg?f=xl'"
@@ -270,8 +324,29 @@
             <p class="item-name item-desc">LAIVA 라이바</p>
             <p class="desc item-desc">책장, 블랙브라운, 62x165 cm</p>
             <h5 class="item-desc" style="font-weight: bold;">25,000원</h5>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="far fa-star"></i>
+            <span style="font-size: 12px">(124)</span>
+            <p class="product-option">기타 옵션</p>
+            <button style="outline: none; margin-top: -55px;" class="cart-btn">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </button>
         </div>
-        <div class-="item-list">
+        <div class="item-list">
+            <button style="outline: none" class="wish-btn">
+                <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </button>
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0945007_pe797524_s5.jpg?f=xl"
                  onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0945008_pe797539_s5.jpg?f=xl'"
@@ -281,8 +356,29 @@
             <p class="item-name item-desc">HYLLIS 휠리스</p>
             <p class="desc item-desc">선반유닛,실내외 겸용,40x27x183 cm</p>
             <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="far fa-star"></i>
+            <span style="font-size: 12px">(344)</span>
+            <p class="product-option">기타 옵션</p>
+            <button style="outline: none; margin-top: -55px;" class="cart-btn">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </button>
         </div>
-        <div class-="item-list">
+        <div class="item-list">
+            <button style="outline: none" class="wish-btn">
+                <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </button>
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/vesken-shelf-unit-white__0419316_pe576206_s5.jpg?f=xl"
                  onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/vesken-shelf-unit-white__0419320_pe576209_s5.jpg?f=xl'"
@@ -291,8 +387,29 @@
             <p class="item-name item-desc">VESKEN 베스켄</p>
             <p class="desc item-desc">선반유닛, 화이트, 36x23x100 cm</p>
             <h5 class="item-desc" style="font-weight: bold;">12,900원</h5>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="far fa-star"></i>
+            <span style="font-size: 12px">(573)</span>
+            <p class="product-option">기타 옵션</p>
+            <button style="outline: none; margin-top: -55px;" class="cart-btn">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </button>
         </div>
-        <div class-="item-list">
+        <div class="item-list">
+            <button style="outline: none" class="wish-btn">
+                <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </button>
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/jonaxel-shelving-unit-white__0678052_pe719167_s5.jpg?f=xl"
                  onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/jonaxel-shelving-unit-white__0678050_pe719166_s5.jpg?f=xxxl'"
@@ -301,8 +418,29 @@
             <p class="item-name item-desc">JONAXEL 요낙셀</p>
             <p class="desc item-desc">선반유닛, 화이트, 80x38x160 cm</p>
             <h5 class="item-desc" style="font-weight: bold;">59,900원</h5>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="far fa-star"></i>
+            <span style="font-size: 12px">(777)</span>
+            <p class="product-option">기타 옵션</p>
+            <button style="outline: none; margin-top: -55px;" class="cart-btn">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </button>
         </div>
-        <div class-="item-list">
+        <div class="item-list">
+            <button style="outline: none" class="wish-btn">
+                <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </button>
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/hornavan-trolley-white__0169887_pe325984_s5.jpg?f=xl"
                  onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hornavan-trolley-white__0832015_pe777552_s5.jpg?f=xl'"
@@ -311,8 +449,29 @@
             <p class="item-name item-desc">HORNAVAN 호르나반</p>
             <p class="desc item-desc">카트,26x48x77 cm</p>
             <h5 class="item-desc" style="font-weight: bold;">15,000원</h5>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="far fa-star"></i>
+            <span style="font-size: 12px">(421)</span>
+            <p class="product-option">기타 옵션</p>
+            <button style="outline: none; margin-top: -55px;" class="cart-btn">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </button>
         </div>
-        <div class-="item-list">
+        <div class="item-list">
+            <button style="outline: none" class="wish-btn">
+                <svg width="22px" height="22px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </button>
             <img class="item-image"
                  src="https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0661297_pe712592_s5.jpg?f=xl"
                  onmouseover="this.src='https://www.ikea.com/kr/ko/images/products/hyllis-shelving-unit-in-outdoor__0911708_pe712591_s5.jpg?f=xl'"
@@ -321,6 +480,20 @@
             <p class="item-name item-desc">HYLLIS 휠리스</p>
             <p class="desc item-desc">실내외선반유닛,180x27x74-140 cm</p>
             <h5 class="item-desc" style="font-weight: bold;">39,000원</h5>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="fas fa-star"></i>
+            <i style="font-size: 12px" class="far fa-star"></i>
+            <span style="font-size: 12px">(514)</span>
+            <p class="product-option">기타 옵션</p>
+            <button style="outline: none; margin-top: -55px;" class="cart-btn">
+                <svg width="24px" height="24px" class="w-6 h-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </button>
         </div>
     </div>
 </div><!--장바구니목록 및 추천제품-->
@@ -408,6 +581,7 @@
         document.getElementById('product_sidenav').style.width = '0';
         document.getElementById('main_nav').style.marginLeft = '500px';
     }
+
     function digitalBack() {
         document.getElementById('digital_sidenav').style.width = '0';
         document.getElementById('main_nav').style.marginLeft = '500px';

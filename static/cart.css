@@ -420,6 +420,27 @@ summary::-webkit-details-marker {
 /*-------------------------------------*/
 /*-------------------------------------*/
 /*추천제품 시작*/
+.item-list{
+    display: block;
+}
+.wish-btn {
+    display: block;
+    position: relative;
+    width: 40px;
+    margin-left: 28vh;
+    border: none;
+    background-color: transparent;
+    color: lightgrey;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.wish-btn:hover {
+    color: black;
+}
+.item-list:hover > button {
+    visibility: visible;
+}
 .noproducts {
     height: 20vh;
     margin-left: 12vh;
@@ -449,6 +470,21 @@ summary::-webkit-details-marker {
 
 .desc {
     font-size: 13px;
+}
+
+.cart-btn{
+    position: relative;
+    width: 40px;
+    float: right;
+    padding-top: 7px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: #0058a3;
+    cursor: pointer;
+}
+.product-option {
+    font-size: 12px;
 }
 
 /*추천제품 끝*/
@@ -500,7 +536,7 @@ h3 {
 /*추천제품 가로스크롤 시작*/
 .recommendation {
     width: 1300px;
-    height: 450px;
+    height: 500px;
     white-space: nowrap;
     overflow-x: scroll;
 
